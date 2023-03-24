@@ -8,7 +8,6 @@
         $sEmail = $_POST['email']; 
         $sUsername = $_POST['username'];
         $sPassword = md5($_POST['password']);
-        
      
         try {
             $qInsert = "INSERT INTO `u955154186_mock_sceiiya`.`tbl_users` 
@@ -26,10 +25,9 @@
             }
 
         } catch(Exception $e) {
-            echo "error";
+            echo 'Error: ' .$e->getMessage();
         }
 
     } else {
-        echo "Failed to connect, please call system administrator!";
+        echo "Connection Failed!";
     }
-

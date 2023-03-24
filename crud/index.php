@@ -25,10 +25,10 @@
                     <input type="password" required>
                     <label for="">Password</label>
                 </div>
-                <div class="remember-password">
+                <!-- <div class="remember-password">
                     <label for=""><input type="checkbox" name="" id="">Remember Me</label>
                     <a href="#">Forget Password</a>
-                </div>
+                </div> -->
                 <button class="btnRegLog">Login In</button>
                 <div class="signup-now">
                     <p>New to our website? <a href="#" class="signup-link">Sign Up Now</a></p>
