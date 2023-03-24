@@ -11,7 +11,7 @@
         
      
         try {
-            $qInsert = "INSERT INTO `dbcrudproject`.`tbl_users` 
+            $qInsert = "INSERT INTO `u955154186_mock_sceiiya`.`tbl_users` 
                 (`first_name`, `last_name`, `email`, `username`, `password`, `date_added`) 
                 VALUES 
                 ('".$sFname."', '{$sLname}', '{$sEmail}', '{$sUsername}', '{$sPassword}', '".date("Y-m-d H:i:s")."')

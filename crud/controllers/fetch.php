@@ -1,7 +1,7 @@
 <?php
     include("../includes/db-connection.php");
 
-    $qSelect = "SELECT * FROM `db_wd49p`.`tbl_registered` ORDER BY id DESC"; // query for selecting record
+    $qSelect = "SELECT * FROM `u955154186_mock_sceiiya`.`tbl_registered` ORDER BY id DESC"; // query for selecting record
     $eSelect = mysqli_query($dbConn, $qSelect); // executing the query
 
     if ($eSelect == true) {
