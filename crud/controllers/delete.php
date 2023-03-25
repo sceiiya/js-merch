@@ -17,11 +17,11 @@
             $eSelect = mysqli_query($dbConn, $qSelect); // executing the query
 
             if ($eSelect == true) {
-
+                $nTotalRows = mysqli_num_rows($eSelect);
                 $sHtml = "
                     <table class='table table-striped table-hover'>
                         <tr>
-                            <th>ID</th>
+                            <th>#</th>
                             <th>Username</th>    
                             <th>First Name</th>
                             <th>Last Name</th>
@@ -33,7 +33,7 @@
                 while($rows = mysqli_fetch_array($eSelect)) {
 
                     $sHtml .= "<tr>
-                            <td>".$rows['id']."</td>
+                            <td>".$nTotalRows."</td>
                             <td>".$rows['username']."</td>
                             <td>".$rows['first_name']."</td>
                             <td>".$rows[2]."</td>
@@ -44,6 +44,7 @@
                                 <button class='btn btn-danger' onclick=del('".$rows['id']."');>Archive</button>
                             </td>
                         ";
+                        $nTotalRows--;
                 }
 
                 $sHtml .= "</table>";
