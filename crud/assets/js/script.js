@@ -35,7 +35,8 @@ document.getElementById("btnRegister").addEventListener('click', function() {
     });
 });
 
-document.getElementById("btn_log_in").addEventListener('click', function() {
+document.getElementById("btn_log_in").addEventListener('click', function(e) {
+    e.preventDefault();
     var sUsername = document.getElementById("lusername").value;
     var sPassword = document.getElementById("lpassword").value;
 

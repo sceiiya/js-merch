@@ -9,7 +9,7 @@
     <div class="login-section">
 
         <div class="formbox login">
-            <form action="">
+            <form>
                 <h2>Log In</h2>
                 <div class="input-box">
                     <span class="icon">
