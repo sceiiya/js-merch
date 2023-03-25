@@ -49,7 +49,11 @@ document.getElementById("btn_log_in").addEventListener('click', function() {
         url: "controllers/login.php",
         data: sJsonData,
         success: (result) => {
-                console.log(result); 
+                if( result == "Login Success") {
+                    window.location = "http://localhost/crud/USER_LIST.php";
+                } else {
+                    console.log(result);
+                }   
         }
     });
 });
