@@ -2,7 +2,7 @@
     session_start();
 
         if(!isset($_SESSION['username'])){
-          header('Location: http://localhost/crud/index.php');
+          header('Location: index.php');
         }else{
             $sUsername = $_SESSION['username'];
         }
@@ -113,7 +113,7 @@
 </body>
 </html>
 <script>document.getElementById('logout').addEventListener('click', function() {
-    window.location = "http://localhost/crud/index.php";
+    window.location = "index.php";
 })</script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="assets/js/jquery-3.6.3.min.js"></script>

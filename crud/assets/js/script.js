@@ -51,7 +51,7 @@ document.getElementById("btn_log_in").addEventListener('click', function(e) {
         data: sJsonData,
         success: (result) => {
                 if( result == "Login Success") {
-                    window.location = "http://localhost/crud/USER_LIST.php";
+                    window.location = "USER_LIST.php";
                 } else {
                     console.log(result);
                 }   

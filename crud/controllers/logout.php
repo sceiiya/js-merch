@@ -19,4 +19,4 @@
     <button id="backToIndex" onclick="backToIndex()">Back to Log In</button>
  </body>
  </html>
- <script>function backToIndex() { window.location = "http://localhost/crud/index.php";} </script>
+ <script>function backToIndex() { window.location = "index.php";} </script>
