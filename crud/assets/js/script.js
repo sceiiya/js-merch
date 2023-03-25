@@ -34,3 +34,22 @@ document.getElementById("btnRegister").addEventListener('click', function() {
         }
     });
 });
+
+document.getElementById("btnRegLog").addEventListener('click', function() {
+    var sUsername = document.getElementById("username").value;
+    var sPassword = document.getElementById("password").value;
+
+    var sJsonData = {
+        username: sUsername,
+        password: sPassword,
+    }
+
+    $.ajax({
+        type: 'POST',
+        url: "controllers/login.php",
+        data: sJsonData,
+        success: (result) => {
+                console.log(result); 
+        }
+    });
+});
