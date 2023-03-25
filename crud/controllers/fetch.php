@@ -37,7 +37,7 @@
 
         $sHtml .= "</table>";
         echo $sHtml;
-        
+        mysqli_close($dbConn);
     } else {
         echo "Connection Failed!";
     }

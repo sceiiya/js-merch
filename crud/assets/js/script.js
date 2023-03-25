@@ -35,9 +35,9 @@ document.getElementById("btnRegister").addEventListener('click', function() {
     });
 });
 
-document.getElementById("btnRegLog").addEventListener('click', function() {
-    var sUsername = document.getElementById("username").value;
-    var sPassword = document.getElementById("password").value;
+document.getElementById("btn_log_in").addEventListener('click', function() {
+    var sUsername = document.getElementById("lusername").value;
+    var sPassword = document.getElementById("lpassword").value;
 
     var sJsonData = {
         username: sUsername,
@@ -52,4 +52,9 @@ document.getElementById("btnRegLog").addEventListener('click', function() {
                 console.log(result); 
         }
     });
+});
+
+// -----------------logout session
+$('#logout').on('click', () => {
+    window.location = 'logout.php';
 });

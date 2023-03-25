@@ -15,21 +15,21 @@
                     <span class="icon">
                         <i class='bx bxs-user'></i>
                     </span>
-                    <input type="text" required>
+                    <input type="text" id='lusername' required>
                     <label for="">Username</label>
                 </div>
                 <div class="input-box">
                     <span class="icon">
                         <i class='bx bxs-lock-alt'></i>
                     </span>
-                    <input type="password" required>
+                    <input type="password" id='lpassword' required>
                     <label for="">Password</label>
                 </div>
                 <!-- <div class="remember-password">
                     <label for=""><input type="checkbox" name="" id="">Remember Me</label>
                     <a href="#">Forget Password</a>
                 </div> -->
-                <button class="btnRegLog">Log In</button>
+                <button class="btnRegLog" id="btn_log_in">Log In</button>
                 <div class="signup-now">
                     <p>New to our website? <a href="#" class="signup-link">Register Now</a></p>
                 </div>

@@ -1,3 +1,14 @@
+<?php 
+    session_start();
+
+        if(!isset($_SESSION['username'])){
+            // header('location: index.php');
+        }else{
+            $AdminSession = $_SESSION['$sUsername'];
+        }
+
+
+    ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +20,11 @@
     <!-- <link rel="stylesheet" href="assets/css/bootstrap-5.3.0/css/bootstrap.min.css"> -->
 </head>
 <body>
-
+<!-- // -----------------logged and logout session -->
+    <div style="width:100%; display:flex; flex-direction:row;">
+      <div>Welcome ADMIN <?php echo "$AdminSession" ?></div>
+      <button id="logout">Log out ADMIN</button>
+      </div>
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">

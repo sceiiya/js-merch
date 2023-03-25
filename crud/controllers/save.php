@@ -1,7 +1,9 @@
 <?php
 
     include("../includes/db-connection.php");
- 
+    
+    session_start();
+
     if ($dbConn == true) {
         $sFname = $_POST['fname']; 
         $sLname = $_POST['lname']; 
@@ -22,13 +24,13 @@
     
             $eInsert = mysqli_query($dbConn, $qInsert); //connection and query
 
-            $qSet = "SET @count = 0;"
+            // $qSet = "SET @count = 0;"
 
-            $eSet = mysqli_query($dbConn, $qSet);
+            // $eSet = mysqli_query($dbConn, $qSet);
 
-            $qReorder = "UPDATE `tbl_users` SET `tbl_users`.`id` = @count:= @COUNT + 1 WHERE `id` IS NOT NULL";
+            // $qReorder = "UPDATE `tbl_users` SET `tbl_users`.`id` = @count:= @COUNT + 1 WHERE `id` IS NOT NULL";
 
-            $eReorder = mysqli_query($dbConn, $qReorder); //Reorder id #
+            // $eReorder = mysqli_query($dbConn, $qReorder); //Reorder id #
             
             mysqli_close($dbConn);
                 if ($eInsert == true) {
