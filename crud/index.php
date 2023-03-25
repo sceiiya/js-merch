@@ -29,9 +29,9 @@
                     <label for=""><input type="checkbox" name="" id="">Remember Me</label>
                     <a href="#">Forget Password</a>
                 </div> -->
-                <button class="btnRegLog">Login In</button>
+                <button class="btnRegLog">Log In</button>
                 <div class="signup-now">
-                    <p>New to our website? <a href="#" class="signup-link">Sign Up Now</a></p>
+                    <p>New to our website? <a href="#" class="signup-link">Register Now</a></p>
                 </div>
             </form>
         </div>
