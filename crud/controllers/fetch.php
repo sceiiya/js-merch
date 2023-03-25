@@ -28,7 +28,7 @@
                     <td>".$rows[3]."</td>
                     <td>".$rows[6]."</td>
                     <td>
-                        <button class='btn btn-info'>Modify</button>&nbsp;
+                    <button class='btn btn-info btn-primary' data-bs-toggle='modal' data-bs-target='#myModal' type='button' onclick=edit('".$rows['id']."')>Modify</button>&nbsp;
                         <button class='btn btn-danger' onclick=del('".$rows['id']."');>Archive</button>
                     </td>
                 ";
