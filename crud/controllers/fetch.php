@@ -9,13 +9,13 @@
         $sHtml = "
                 <table class='table table-striped table-hover'>
                     <tr>
-                        <th>#</th>
-                        <th>Username</th>    
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>Email</th>
-                        <th>Account Created</th>
-                        <th>Action</th>
+                        <th class='data_head'>#</th>
+                        <th class='data_head'>Username</th>    
+                        <th class='data_head'>First Name</th>
+                        <th class='data_head'>Last Name</th>
+                        <th class='data_head'>Email</th>
+                        <th class='data_head'>Account Created</th>
+                        <th class='data_head'>Action</th>
                     </tr>
             ";
         while($rows = mysqli_fetch_array($eSelect)) {

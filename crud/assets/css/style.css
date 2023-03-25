@@ -155,6 +155,16 @@ body{
     transition-delay: 0s ease;
 }
 
+.data_head{
+    font-family: 'Poppins', sans-serif !important; 
+    color: #37306B !important;
+}
+
+.data_dot{
+    font-family: 'Poppins', sans-serif; 
+    color: white;
+    border: 2px solid #AA77FF;
+}
 /* 
 COLOR VARIABLES
 LIGHTBLUE = #AA77FF

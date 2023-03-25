@@ -18,12 +18,13 @@
     <title>DJS User List</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- <link rel="stylesheet" href="assets/css/bootstrap-5.3.0/css/bootstrap.min.css"> -->
-</head>
-<body>
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+<body style="flex-direction:column;">
 <!-- // -----------------logged and logout session -->
-    <div style="width:100%; display:flex; flex-direction:column; font-size: 20px;">
-      <div>Welcome, <strong><?php echo "$sUsername" ?></strong>!</div>
-      <button id="logout" style="width: 100px; margin-top: 10px;" onclick=<?php session_abort() ?>>Log out</button>
+    <div style="width:100%; display:flex; flex-direction:row; justify-content:space-between; font-size: 20px;">
+      <div style="margin-left:50px;">Welcome, <strong><?php echo "$sUsername" ?></strong>!</div>
+      <button id="logout" style="border:none; background-color:unset; margin-right:50px; width: 100px; margin-top: 10px;" onclick=<?php session_abort() ?>>Log out</button>
       </div>
     <div class="container-fluid">
         <div class="row">
