@@ -23,7 +23,7 @@
 <!-- // -----------------logged and logout session -->
     <div style="width:100%; display:flex; flex-direction:column; font-size: 20px;">
       <div>Welcome, <strong><?php echo "$sUsername" ?></strong>!</div>
-      <button id="logout" style="width: 100px; margin-top: 10px;" onclick=<?php session_destroy() ?>>Log out</button>
+      <button id="logout" style="width: 100px; margin-top: 10px;" onclick=<?php session_abort() ?>>Log out</button>
       </div>
     <div class="container-fluid">
         <div class="row">
