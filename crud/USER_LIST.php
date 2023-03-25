@@ -2,9 +2,9 @@
     session_start();
 
         if(!isset($_SESSION['username'])){
-            // header('location: index.php');
+          header('Location: http://localhost/crud/index.php');
         }else{
-            $AdminSession = $_SESSION['$sUsername'];
+            $sUsername = $_SESSION['username'];
         }
 
 
@@ -21,9 +21,9 @@
 </head>
 <body>
 <!-- // -----------------logged and logout session -->
-    <div style="width:100%; display:flex; flex-direction:row;">
-      <div>Welcome ADMIN <?php echo "$AdminSession" ?></div>
-      <button id="logout">Log out ADMIN</button>
+    <div style="width:100%; display:flex; flex-direction:column; font-size: 20px;">
+      <div>Welcome, <strong><?php echo "$sUsername" ?></strong>!</div>
+      <button id="logout" style="width: 100px; margin-top: 10px;" onclick=<?php session_destroy() ?>>Log out</button>
       </div>
     <div class="container-fluid">
         <div class="row">
@@ -112,6 +112,9 @@
     <!-- <button id="btnTest">Test</button> -->
 </body>
 </html>
+<script>document.getElementById('logout').addEventListener('click', function() {
+    window.location = "http://localhost/crud/index.php";
+})</script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="assets/js/jquery-3.6.3.min.js"></script>
 <script src="assets/js/fetch.js"></script>
