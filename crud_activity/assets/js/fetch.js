@@ -1,12 +1,20 @@
 window.addEventListener('load', () => {
 
-    interval();
+    fetch();
 
 });
 
-function interval() {
-    setInterval("fetch()", 1000);
-}
+// function interval() {
+//     setInterval("fetch()", 1000);
+// }// window.addEventListener('load', () => {
+
+//     interval();
+
+// });
+
+// function interval() {
+//     setInterval("fetch()", 1000);
+// }
 
 function fetch() {
     
