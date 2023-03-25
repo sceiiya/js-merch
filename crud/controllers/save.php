@@ -15,7 +15,12 @@
                 VALUES 
                 ('".$sFname."', '{$sLname}', '{$sEmail}', '{$sUsername}', '{$sPassword}', '".date("Y-m-d H:i:s")."')
             ";
-            
+
+            $qReorder = 
+            "SET @count = 0;
+            UPDATE `tbl_users` SET `tbl_users`.`id` = @count:= @COUNT + 1 WHERE `id` IS NOT NULL";
+
+            $eReorder = mysqli_query($dbConn, $qReorder); //Reorder id #
             $eInsert = mysqli_query($dbConn, $qInsert); //connection and query
 
             if ($eInsert == true) {
