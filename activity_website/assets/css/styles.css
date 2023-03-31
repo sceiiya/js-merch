@@ -28,3 +28,54 @@ body{
     padding: 20px;
     border-radius: 8px;
 }
+
+body {
+    background-color: #245d1e;
+}
+
+/* Login and signup */
+
+#login-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 160px;
+}
+
+#login-wrapper {
+    width: 350px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 30px;
+    background-color: whitesmoke !important;
+}
+
+#registerClient {
+    margin-left: 130px;
+}
+
+/* Homepage Cards */
+
+#prouct-container {
+    display: flex;
+    justify-content: center;
+}
+
+#product-wrapper {
+    border: 1px solid red;
+    margin: 20px;
+    padding: 20px;
+    width: 90%;
+    display: flex !important;
+    flex-flow: wrap row;
+}
+
+.card {
+    width: 230px;
+    height: 310px;
+}
+
+.card-body img {
+    height: 300px;
+    width: 200px;
+}    
