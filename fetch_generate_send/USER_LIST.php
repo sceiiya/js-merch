@@ -122,7 +122,7 @@ document.getElementById('sendAtch').addEventListener('click', () =>{
     $.ajax({
         type: 'POST',
         url: "controllers/attach.php",
-	data: 'molt'
+	data: 'molt',
         success: (result) => {
                 if( result == "Login Success") {
                     console.log(result);
