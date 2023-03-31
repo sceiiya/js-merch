@@ -15,27 +15,23 @@
 
     <div id="login-container">
         <div id="login-wrapper">
-            <h3>LOGIN</h3>
+            <h5>A One Time Password was sent to your email.
+                Please verify here.
+            </h5>
 
             <form class="position-relative">
-                <!-- Email input -->
+                <!-- OTP input -->
                 <div class="form-outline mb-4">
-                    <input type="email" id="loginUsername" class="form-control" />
-                    <label class="form-label" for="form2Example1">Username</label>
-                </div>
-
-                <!-- Password input -->
-                <div class="form-outline mb-4">
-                    <input type="password" id="loginPassword" class="form-control" />
-                    <label class="form-label" for="form2Example2">Password</label>
+                    <input type="number" id="OTP" class="form-control" />
+                    <label class="form-label" for="form2Example1">Enter OTP</label>
                 </div>
 
             </form>
             <!-- Submit button -->
-            <button type="button" id="loginClient" class="btn btn-primary btn-block mb-4">Log In</button>
+            <button type="button" id="verifyOTP" class="btn btn-primary btn-block mb-4">Verify</button>
 
             <div class="text-center">
-                <p>No account? <a href="#!">Register here</a></p>
+                <p>Send new OTP? <a href="#!">Resend</a></p>
             </div>
         </div>
 

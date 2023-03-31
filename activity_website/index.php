@@ -1,3 +1,15 @@
+<?php
+
+session_start();
+
+    if(!isset($_SESSION['username'])){
+        header('Location: /activity_website/controllers/login.php');
+    }else{
+        $sUsername = $_SESSION['username'];
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,7 +39,7 @@
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Profile</a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#">Change Password</a></li>
-                            <li><a class="dropdown-item" href="#">Logout</a></li>
+                            <li><a class="dropdown-item" href="/activity_website/controllers/logout.php" id="logoutClient">Logout</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -38,19 +50,44 @@
 </head>
 
 <body>
+    <h2>WELCOME <?php echo $sUsername;?>!</h2>
 
-    <div id="product-container">
-
-        <div id="product-wrapper" class="row">
-
-
-
+    <section class="content-cards-container">
+        <div class="card-cont-attr">
+            <a class="card-attr" href="/activity_website/assets/images/">
+                <div class="item-img-cont">
+                    <img src="/activity_website/assets/images/sampleshirt.svg" class="item-img-main" alt="...">
+                </div>
+                <div class=" item-inf-cont">
+                    <div class="item-inf-tex-cont">
+                        <p class="item-name txt-light-inv">
+                            Sample T-shirt
+                        </p>
+                    </div>
+                    <div class="item-inf-tex-cont mb-0 pt-0">
+                        <p class="item-price">$69</p>
+                    </div>
+                    <div class="item-inf-tex-cont mt-0 pt-0">
+                        <p class="item-sold-count">668 Items Left</p>
+                    </div>
+                    <div class="item-inf-tex-cont txt-light-inv">
+                        <p class="rating-cont">
+                            <i class="fas fa-star rated"></i>
+                            <i class="fas fa-star rated"></i>
+                            <i class="fas fa-star rated"></i>
+                            <i class="fas fa-star rated"></i>
+                            <i class="fas fa-star unrated"></i>
+                        </p>
+                    </div>
+                </div>
+            </a>
         </div>
-
-    </div>
+        
+    </section>
 
 </body>
 
 </html>
+<script src="/activity_website/assets/js/jquery-3.6.3.min.js"></script>
 <script src="/activity_website/assets/js/scripts.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>

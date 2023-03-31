@@ -20,25 +20,25 @@
             <form class="position-relative">
                 <!-- Full Name input -->
                 <div class="form-outline mb-4">
-                    <input type="name" id="form2Example1" class="form-control" />
+                    <input type="name" id="fullNameClient" class="form-control" />
                     <label class="form-label" for="form2Example1">Full Name</label>
                 </div>
 
                 <!-- Username input -->
                 <div class="form-outline mb-4">
-                    <input type="name" id="form2Example1" class="form-control" />
+                    <input type="name" id="usernameClient" class="form-control" />
                     <label class="form-label" for="form2Example2">Username</label>
                 </div>
 
                 <!-- Email input -->
                 <div class="form-outline mb-4">
-                    <input type="email" id="form2Example1" class="form-control" />
+                    <input type="email" id="emailClient" class="form-control" />
                     <label class="form-label" for="form2Example3">Email</label>
                 </div>
 
                 <!-- Password input -->
                 <div class="form-outline mb-4">
-                    <input type="password" id="form2Example2" class="form-control" />
+                    <input type="password" id="passwordClient" class="form-control" />
                     <label class="form-label" for="form2Example4">Password</label>
                 </div>
 
@@ -53,4 +53,5 @@
 
 </html>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+<script src="/activity_website/assets/js/jquery-3.6.3.min.js"></script>
 <script src="/activity_website/assets/js/scripts.js"></script>
