@@ -78,4 +78,208 @@ body {
 .card-body img {
     height: 300px;
     width: 200px;
-}    
+}
+
+
+:root{
+    --pritheme: #245D1E;
+    --sectheme: #348d2a;
+    --lighttheme: #589451;
+    --whitetheme: #81d179;
+}
+
+body{
+    scroll-behavior: smooth;
+    background-color: var(--whitetheme);
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+    display: none;
+}
+
+.admin-logAccess{
+    background-color: white;
+    width: 350px;
+    height: fit-content;
+    box-sizing:border-box;
+    align-self: center;
+    display: block;
+    margin: auto;
+    justify-self: center;
+    transform: translateY(30%);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+
+
+/*----------------- product carde here ------------*/
+
+.card-attr{
+    margin:2px 3px 2px 0px;
+    border-radius: 0 0 3vh 1vh;
+    box-shadow: 0px 1px 2px #211d2175;
+    box-sizing: border-box;
+    
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    width: 15.8%;
+    padding: 0;
+
+    vertical-align: top;
+    max-width: 189px !important;
+    margin-right: 7px;
+    /* min-height: 189px; */
+    height: 100% !important;
+    background-color: #fffbf2;
+}
+
+.card-attr-featured-coll{
+    margin:2px 3px 2px 0px;
+    border-radius: 0 0 3vh 1vh;
+    box-shadow: 0px 1px 2px #211d2175;
+    box-sizing: border-box;
+    
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    width: 31.4%;
+    padding: 0;
+
+    vertical-align: top;
+    max-width: 189px !important;
+    margin-right: 7px;
+    /* min-height: 189px; */
+    background: #fffbf2;
+    height: 100% !important;
+}
+
+.card-attr>*{
+    font-size: 2vh;
+}
+
+.item-img-cont{
+    box-shadow: 0px 5px 10px -15px #211d2175;  
+    box-sizing: border-box;
+    width: 100% !important;
+    height: fit-content !important;
+    padding: 0;
+}
+
+.item-img-main{
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    object-fit: cover;
+    aspect-ratio: 1;
+}
+
+.item-inf-cont{
+    height: 38% !important;
+    text-align: left;
+    box-sizing: border-box;
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+}
+
+.item-inf-tex-cont{
+    padding: 0;
+    margin: 1px;
+}
+
+.item-name{
+    font-weight: 500;
+    box-sizing: border-box;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding: 3px;
+    word-wrap: break-word;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+            line-clamp: 2; 
+    -webkit-box-orient: vertical;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    font-size: .8rem;
+}
+
+.item-price{
+    color: #a50113;
+    box-sizing: border-box;
+    font-weight: 700;
+    margin-bottom: 0px;
+    font-size: 1.2rem;
+    text-align: left;
+}
+
+.item-sold-count{
+    color: #5e5e5e;
+    box-sizing: border-box;
+    font-weight: 300;
+    font-size: .8rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.rating-cont{
+    display: flex;
+    flex-wrap: wrap;
+    white-space: nowrap;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+.rated{
+    color: #a50113;
+    font-size: 2.5vh !important;
+}
+
+.unrated{
+    color: unset;
+    font-size: 2.5vh !important;
+}
+/*----------------- product carde here ------------*/
+
+
+/*----------------- product cont container here ------------*/
+.product-cont{
+    width: 70%;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 0px 0px 0px rgba(255, 255, 255, 0), 0 -15px 16px 8px #a501146b, 0px 0 0px 0px #ffffff00, 0 -15px 16px 8px #a501146b;
+    box-sizing: border-box;
+    text-align: center;
+    z-index: 4;
+}
+
+.content-cards-container{
+    height: fit-content;
+    flex-direction: row;
+
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    width: 100% !important;
+    padding-left: calc(var(--bs-gutter-x) * 0.25);
+    margin-right: 0;
+    margin-left: 0;
+    align-items: center;
+    padding-top: 1px;
+    padding-bottom: 3px;
+}
+
+.card-cont-attr{
+    margin: 0px 0px 0px 1px;
+    height: 100% !important;
+    display: flex;
+    flex-direction: row;
+    /* display: grid;
+    grid-template-columns: auto auto auto auto auto auto; */
+    box-sizing: border-box;
+    padding: 2px 0px 2px 0px;
+    align-items: center;
+    justify-content: center;
+
+}
+/*----------------- product cont container here ------------*/
