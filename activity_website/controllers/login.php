@@ -15,6 +15,7 @@
 
     <div id="login-container">
         <div id="login-wrapper">
+            <h3>LOGIN</h3>
 
             <form class="position-relative">
                 <!-- Email input -->

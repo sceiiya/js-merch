@@ -39,7 +39,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 160px;
+    padding-top: 110px;
 }
 
 #login-wrapper {
@@ -48,10 +48,6 @@ body {
     border-radius: 5px;
     padding: 30px;
     background-color: whitesmoke !important;
-}
-
-#registerClient {
-    margin-left: 130px;
 }
 
 /* Homepage Cards */
