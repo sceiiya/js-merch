@@ -34,3 +34,32 @@ document.getElementById("btnRegister").addEventListener('click', function() {
         }
     });
 });
+
+document.getElementById("btn_log_in").addEventListener('click', function(e) {
+    e.preventDefault();
+    var sUsername = document.getElementById("lusername").value;
+    var sPassword = document.getElementById("lpassword").value;
+
+    var sJsonData = {
+        username: sUsername,
+        password: sPassword,
+    }
+
+    $.ajax({
+        type: 'POST',
+        url: "controllers/login.php",
+        data: sJsonData,
+        success: (result) => {
+                if( result == "Login Success") {
+                    window.location = "USER_LIST.php";
+                } else {
+                    console.log(result);
+                }   
+        }
+    });
+});
+
+// -----------------logout session
+$('#logout').on('click', () => {
+    window.location = 'logout.php';
+});
