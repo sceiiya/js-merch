@@ -1,3 +1,34 @@
+:root{
+    --pritheme: #245D1E;
+    --sectheme: #348d2a;
+    --lighttheme: #589451;
+    --whitetheme: #81d179;
+}
+
+body{
+    scroll-behavior: smooth;
+    background-color: var(--whitetheme);
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+    display: none;
+}
+
+.admin-logAccess{
+    background-color: white;
+    width: 350px;
+    height: fit-content;
+    box-sizing:border-box;
+    align-self: center;
+    display: block;
+    margin: auto;
+    justify-self: center;
+    transform: translateY(30%);
+    padding: 20px;
+    border-radius: 8px;
+}
+
 body {
     background-color: #245d1e;
 }
@@ -47,4 +78,4 @@ body {
 .card-body img {
     height: 300px;
     width: 200px;
-}
+}    
