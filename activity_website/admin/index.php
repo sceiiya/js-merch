@@ -23,21 +23,18 @@
       <div class="text-center mb-3">
         <p>LOGIN ADMIN ACCESS</p>
       </div>
-
-      <p class="text-center">or:</p>
-
       <!-- Email input -->
       <div class="form-outline mb-4">
-        <input type="email" id="loginName" class="form-control" />
+        <input type="email" id="loginName" class="form-control" placeholder="username"/>
       </div>
 
       <!-- Password input -->
       <div class="form-outline mb-4">
-        <input type="password" id="loginPassword" class="form-control" />
+        <input type="password" id="loginPassword" class="form-control" placeholder="password"/>
       </div>
       <!-- Submit button -->
     </form>
-    <button type="submit" class="btn btn-primary btn-block mb-4">Gain Access</button>
+    <button type="submit" class="btn btn-primary btn-block mb-4" id="adminLog">Gain Access</button>
 
   </div>
  
