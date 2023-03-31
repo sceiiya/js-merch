@@ -7,13 +7,16 @@
 
 body{
     scroll-behavior: smooth;
+    background-color: var(--whitetheme);
 }
 
 ::-webkit-scrollbar {
     width: 12px;
     display: none;
 }
+
 .admin-logAccess{
+    background-color: white;
     width: 350px;
     height: fit-content;
     box-sizing:border-box;
@@ -22,4 +25,6 @@ body{
     margin: auto;
     justify-self: center;
     transform: translateY(30%);
+    padding: 20px;
+    border-radius: 8px;
 }
