@@ -5,44 +5,44 @@
     session_start();
 
     if ($dbConnection == true) {
-        $Pcode = $_POST['code'];  
-        $Pname = $_POST['name'];
-        $Pprice = $_POST['price'];
-        $Pqty = $_POST['qty'];
-        $Pdesc = $_POST['description'];
-        $Pimg = $_POST['image'];
+        $aName = $_POST['adName'];
+        $aUname = $_POST['adUname'];
+        $aEmail = $_POST['adEmail'];  
+        $aPosition = $_POST['adPosition'];
+        $aPwd = substr(sha1(mt_rand()),17,12);
+
         
-        if( $Pcode == "" || $Pname == "" || $Pprice == "" || $Pqty == "" || $Pdesc == "") {
-            echo "Incomplete product description";
+        if( $aName == "" || $aUname == "" || $aEmail == "" || $aPosition == "") {
+            echo "Incomplete credentials";
             mysqli_close($dbConnection);
         } else { 
             try {
-                // $qSelect = "SELECT `ProductName` FROM `u955154186_db_djstrading`.`products`  WHERE `ProductName` = '$Pname'";
-                // $eSelect = mysqli_query($dbConnection, $qSelect);
+                $qSelect = "SELECT `Username` FROM `u955154186_db_djstrading`.`systemusers`  WHERE `Username` = '$aUname'";
+                $eSelect = mysqli_query($dbConnection, $qSelect);
  
-                // $rows = mysqli_fetch_assoc($eStatSelect);
-                // $nTotalRows = mysqli_num_rows($eSelect);
+                $rows = mysqli_fetch_assoc($eSelect);
+                $nTotalRows = mysqli_num_rows($eSelect);
 
-                // if ($rows['ProductName'] == $Pname || $nTotalRows > 0) {
-                //     echo "Product Name already listed";
-                //     mysqli_close($dbConnection);
-                // } else {
+                if ($rows['Username'] == $aUname || $nTotalRows > 0) {
+                    echo "Admin already added";
+                    mysqli_close($dbConnection);
+                } else {
 
                     $qInsert = "INSERT INTO `u955154186_db_djstrading`.`systemusers` 
-                        (`ProductCode`, `ProductName`, `ProductPrice`, `ProductQuantity`, `ProductDescription`, `ProductPhoto`) 
+                        (`UserFullName`, `Username`, `UserEmail`, `UserPosition`, `UserPassword`) 
                         VALUES 
-                        ('{$Pcode}', '{$Pname}', '{$Pprice}', '{$Pqty}', '{$Pdesc}', '{$Pimg}')";
+                        ('{$aName}', '{$aUname}', '{$aEmail}', '{$aPosition}', '{$aPwd}')";
         
                     $eInsert = mysqli_query($dbConnection, $qInsert);
                     
                         if ($eInsert == true) {
-                            echo "Product Listed!";
+                            echo "New Admin added!";
                         } else {
-                            echo "Failed Listing!";
+                            echo 'Error: ' .$e->getMessage();
                         }
 
                         mysqli_close($dbConnection);
-                // }
+                }
             } catch(Exception $e) {
                 echo 'Error: ' .$e->getMessage();
             }
