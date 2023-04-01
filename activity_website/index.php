@@ -38,8 +38,8 @@ session_start();
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Profile</a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Change Password</a></li>
-                            <li><a class="dropdown-item" href="/activity_website/controllers/logout.php" id="logoutClient">Logout</a></li>
+                            <li><a class="dropdown-item" id="changePass" href="#!">Change Password</a></li>
+                            <li><a class="dropdown-item" href="/activity_website/logout.php" id="logoutClient">Logout</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -50,6 +50,8 @@ session_start();
 </head>
 
 <body>
+    <?php include("../activity_website/includes/pass_modal.php");?>
+
     <h2>WELCOME <?php echo $sUsername;?>!</h2>
 
     <section class="content-cards-container">
