@@ -16,14 +16,14 @@ $("#registerClient").on('click', () => {
         url: "/activity_website/controllers/saveRegClient.php",
         data: sJsonData,
         success: (result) => {
-            if( result == "Record successfully saved!") {
-                window.location = "/activity_website/OTP.php";
+            if( result == true) {
+                console.log(result);
             } else if ( result == "Incomplete fields") {
                 alert("Please fill out all fields");
             } else if ( result == "Username used") {
                 alert("Username already used");
             }else {
-                console.log(result);
+                window.location = "/activity_website/OTP.php";
             }  
         }
     });
@@ -68,7 +68,8 @@ $("#verifyOTP").on('click', () => {
         data: sJsonData,
         success: (result) => {
                 if( result == "OTP Verified") {
-                    console.log("OTP Verified! Oh Yeah!");
+                    console.log("OTP Verified!");
+                    alert("OTP Verified, please log in.")
                     window.location = "/activity_website/login.php";
                 } else {
                     alert("OTP not verified, please check you email.")
@@ -79,16 +80,16 @@ $("#verifyOTP").on('click', () => {
 });
 
 
-// $('#logoutClient').on('click', () => {
-//     $.ajax({
-//         type: 'POST',
-//         url: "/activity_website/controllers/logout.php",
-//         success: (result) => {
-//             if (result == "Session Aborted") {
-//                 window.location = "/activity_website/controllers/login.php";
-//             }else {
-//                 console.log(result);
-//             }
-//         }
-//     })
-// })
+$('#resendOTP').on('click', () => {
+    $.ajax({
+        type:'POST',
+        url: "/activity_website/controllers/resend_otp.php",
+        success: (result) => {
+            if( result == "sent") {
+                alert("OTP sent, please check you email.");
+            } else {
+                console.log(result);
+            }
+        }
+    })
+})
