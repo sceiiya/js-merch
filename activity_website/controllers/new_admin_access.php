@@ -37,6 +37,49 @@
                     
                         if ($eInsert == true) {
                             echo "New Admin added!";
+
+                            require_once('../phpmailer/class.phpmailer.php');
+
+                            $mail = new PHPMailer();
+                         
+                            $mail->IsSMTP();
+                            $mail->SMTPDebug = 2;
+                            $mail->SMTPAuth 	= true;
+                        
+                            $mail->Host 		= 'smtp.hostinger.com';
+                            $mail->Username 	= 'wd49p.main@wd49p.com';
+                            $mail->Password 	= 'Wd49PM@in';
+                            $mail->From 		= 'wd49p.main@wd49p.com';
+                            $mail->FromName 	= "DJS Merch";
+                            $mail->SMTPSecure 	= 'ssl';
+                            $mail->Port 		= 465;
+                            
+                            $mail->AddCC("{$aEmail}", "{$aName}");
+                        
+                            $mail->Subject = "Granted Position of {$aPosition} Welcome to our Team!";
+                            $mail->Body = nl2br("
+                            You have been granted {$aPosition} Title in working with our team!
+                            
+                            Here are your Credentials. You may use it for logging in admin access!
+                            Do not share your credentials to anyone other than you!
+                        
+                            Title grant: {$aPosition}
+                            Full Name: {$aName}
+                            Username: {$aUname}
+                            Email: {$aEmail}
+                            Password: {$aPwd}
+                        
+                            ");
+                            
+                            $mail->IsHTML(true);
+                            
+                        
+                            if(!$mail->Send()) {
+                                echo  "unsent";
+                            } else {
+                                echo "sent";
+                            }
+
                         } else {
                             echo 'Error: ' .$e->getMessage();
                         }
