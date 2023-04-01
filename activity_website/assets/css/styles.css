@@ -311,3 +311,10 @@ body{
     bottom: 15px;
     right: 8px;
 }
+
+.prod_desc{
+    max-width: 450px !important;
+        overflow: hidden;
+    text-overflow: ellipsis;
+    display: none;
+}
