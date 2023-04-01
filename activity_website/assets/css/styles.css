@@ -7,7 +7,7 @@
 
 body{
     scroll-behavior: smooth;
-    background-color: var(--whitetheme);
+    background-color: var(--sectheme);
 }
 
 ::-webkit-scrollbar {
@@ -27,10 +27,6 @@ body{
     transform: translateY(30%);
     padding: 20px;
     border-radius: 8px;
-}
-
-body {
-    background-color: #245d1e;
 }
 
 /* Login and signup */
@@ -192,7 +188,7 @@ body{
 }
 
 .item-price{
-    color: #a50113;
+    color: var(--pritheme);
     box-sizing: border-box;
     font-weight: 700;
     margin-bottom: 0px;
@@ -219,7 +215,7 @@ body{
 }
 
 .rated{
-    color: #a50113;
+    color: var(--pritheme);
     font-size: 2.5vh !important;
 }
 
@@ -271,3 +267,47 @@ body{
 
 }
 /*----------------- product cont container here ------------*/
+
+
+
+
+
+
+
+
+
+/* admin listing here */
+
+.main_adminList{
+    align-self: center;
+    width: calc(100%-200px);
+    margin: 0 100px 0 100px;
+    height: 100%;
+    border: 2px solid red;
+}
+
+.add-list-cont{
+    width: 500px !important;
+    background-color: lightblue;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.pDescription{
+    min-height: 500px;
+    text-align: start;
+    vertical-align:top !important;
+    overflow-wrap: break-word;
+    overflow: hidden;
+    word-wrap: break-word;
+    box-sizing: border-box;
+    height: fit-content;
+}
+
+#addProduct{
+    background-color: var(--whitetheme);
+    border-radius: 5px;
+    position: fixed;
+    bottom: 15px;
+    right: 8px;
+}
