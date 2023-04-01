@@ -4,7 +4,7 @@
     
     session_start();
 
-    if ($dbConn == true) {
+    if ($dbConnection == true) {
         $sFullname = $_POST['fullname'];  
         $sUsername = $_POST['username'];
         $sEmail = $_POST['email'];
@@ -12,26 +12,37 @@
         $OTP = rand(1000, 9999);
         
         if( $sFullname == "" || $sEmail == "" || $sUsername == "" || $sPassword == "" ) {
-            echo "Failed to Process";
+            echo "Incomplete fields";
+            mysqli_close($dbConnection);
         } else { 
-
             try {
-                $qInsert = "INSERT INTO `u955154186_db_djstrading`.`clients` 
-                    (`ClientFullName`, `ClientUsername`, `ClientEmail`, `ClientPassword`, `ClientOTP`, `date_added`) 
-                    VALUES 
-                    ('".$sFullname."', '{$sUsername}', '{$sEmail}', '{$sPassword}', '{$OTP}', '".date("Y-m-d H:i:s")."')";
-    
-                $eInsert = mysqli_query($dbConn, $qInsert);
-                
-                    if ($eInsert == true) {
-                        $_SESSION['usernamereg'] = $sUsername;
-                        $_SESSION['emailreg'] = $sEmail;
-                        echo "Record successfully saved!";
-                    } else {
-                        echo "Failed to process, please call system administrator!";
-                    }
+                $qSelect = "SELECT `ClientUsername` FROM `u955154186_db_djstrading`.`clients`  WHERE `ClientUsername` = '$sUsername'";
+                $eSelect = mysqli_query($dbConnection, $qSelect);
+                $rows = mysqli_fetch_assoc($eStatSelect);
+                $nTotalRows = mysqli_num_rows($eSelect);
 
-                    mysqli_close($dbConn);
+                if ($rows['ClientUsername'] == $sUsername || $nTotalRows > 0) {
+                    echo "Username used";
+                    mysqli_close($dbConnection);
+                } else {
+
+                    $qInsert = "INSERT INTO `u955154186_db_djstrading`.`clients` 
+                        (`ClientFullName`, `ClientUsername`, `ClientEmail`, `ClientPassword`, `ClientOTP`, `date_added`) 
+                        VALUES 
+                        ('".$sFullname."', '{$sUsername}', '{$sEmail}', '{$sPassword}', '{$OTP}', '".date("Y-m-d H:i:s")."')";
+        
+                    $eInsert = mysqli_query($dbConnection, $qInsert);
+                    
+                        if ($eInsert == true) {
+                            $_SESSION['usernamereg'] = $sUsername;
+                            $_SESSION['emailreg'] = $sEmail;
+                            echo "Record successfully saved!";
+                        } else {
+                            echo "Failed to process, please call system administrator!";
+                        }
+
+                        mysqli_close($dbConnection);
+                }
             } catch(Exception $e) {
                 echo 'Error: ' .$e->getMessage();
             }

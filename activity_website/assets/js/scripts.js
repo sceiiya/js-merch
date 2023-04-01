@@ -18,7 +18,11 @@ $("#registerClient").on('click', () => {
         success: (result) => {
             if( result == "Record successfully saved!") {
                 window.location = "/activity_website/controllers/OTP.php";
-            } else {
+            } else if ( result == "Incomplete fields") {
+                alert("Please fill out all fields");
+            } else if ( result == "Username used") {
+                alert("Username already used");
+            }else {
                 console.log(result);
             }  
         }

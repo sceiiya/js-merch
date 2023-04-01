@@ -9,24 +9,24 @@
         $sEmail = $_SESSION['emailreg'];
     }
 
-    if ($dbConn == true) {
+    if ($dbConnection == true) {
         $sOTP = $_POST['otp'];
         try {
             $qSelect = "SELECT `ClientOTP` FROM `u955154186_db_djstrading`.`clients` WHERE `ClientUsername` = '$sUsername' AND `ClientEmail` = '$sEmail'";
-            $eSelect = mysqli_query($dbConn, $qSelect);
+            $eSelect = mysqli_query($dbConnection, $qSelect);
             $rows = mysqli_fetch_assoc($eSelect);
             $nTotalRows = mysqli_num_rows($eSelect);
 
             if ($nTotalRows > 0 && $rows['ClientOTP'] == $sOTP) {
                 $qUpdate = "UPDATE `u955154186_db_djstrading`.`clients` SET `ClientStatus` = 'OTP Verified' WHERE `ClientUsername` = '{$sUsername}' AND `ClientOTP` =  '{$sOTP}'";
-                $eUpdate = mysqli_query($dbConn, $qUpdate);
+                $eUpdate = mysqli_query($dbConnection, $qUpdate);
                 echo "OTP Verified";
-                mysqli_close($dbConn);
+                mysqli_close($dbConnection);
             }else{
                 $qUpdate = "UPDATE `u955154186_db_djstrading`.`clients` SET `ClientStatus` = 'OTP Not Verified' WHERE `ClientUsername` = '{$sUsername}' AND `ClientEmail` =  '{$sEmail}'";
-                $eUpdate = mysqli_query($dbConn, $qUpdate);
+                $eUpdate = mysqli_query($dbConnection, $qUpdate);
                 echo "OTP Not Verified";
-                mysqli_close($dbConn);
+                mysqli_close($dbConnection);
             }
         } catch(Exception $e) {
             echo "error";
