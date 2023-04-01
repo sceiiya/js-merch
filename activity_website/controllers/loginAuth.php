@@ -1,5 +1,5 @@
 <?php
-    include("../includes/db-connection.php");
+    include("../includes/db_connection.php");
     session_start();
 
     if ($dbConn == true) {
