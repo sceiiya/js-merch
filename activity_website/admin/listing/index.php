@@ -68,7 +68,7 @@
         <!-- Register buttons -->
         <div class="text-center">
         </div>
-</div>
+      </div>
 
     </div>
   </div>

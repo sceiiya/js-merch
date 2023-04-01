@@ -26,17 +26,33 @@ $("#ListProduct").on('click', () => {
       url: "/activity_website/controllers/admin_list_product.php",
       data: sJsonProduct,
       success: (result) => {
-          if( result == "Record successfully saved!") {
+          if( result == "Product Listed!") {
 
-            $('#pCode').attr('value') = '';
-            $('#pName').attr('value') = '';
-            $('#pPrice').attr('value') = '';
-            $('#pQty').attr('value') = '';
-            $('#pDescription').attr('value') = '';
-            $('#pImage').attr('value') = '';
+            // var dCode = $("#pCode").html('');
+            // var dName = $("#pName").html('');
+            // var dPrice = $("#pPrice").html('');
+            // var dQty = $("#pQty").html('');
+            // var dDescription = $("#pDescription").html('');
+            // var dImage = $("#pImage").html('');
 
-            // $('#addtoListModal').modal('hide');
+            // var dCode = ' ';
+            // var dName = ' ';
+            // var dPrice = ' ';
+            // var dQty = ' ';
+            // var dDescription = ' ';
+            // var dImage = ' ';
+
+            // $('#pCode').attr('value') = '';
+            // $('#pName').attr('value') = '';
+            // $('#pPrice').attr('value') = '';
+            // $('#pQty').attr('value') = '';
+            // $('#pDescription').attr('value') = '';
+            // $('#pImage').attr('value') = '';
+
+            $('#addtoListModal').modal('hide');
         
+            console.log(result);
+
               // window.location = "/activity_website/controllers/OTP.php";
           } else if ( result == "Incomplete product description") {
               alert("Please fill out product all details");

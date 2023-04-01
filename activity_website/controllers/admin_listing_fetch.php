@@ -11,7 +11,7 @@
                         <th style='display:none'>Product ID</th>  
                         <th>Product Name</th>    
                         <th>Product Code</th>
-                        <th>Product Description</th>
+                        <th style='display:none'>Product Description</th>
                         <th>Price</th>
                         <th>Quantity</th>
                         <th>Action</th>
@@ -23,7 +23,7 @@
                     <td style='display:none'>".$rows['ProductId']."</td>
                     <td>".$rows['ProductCode']."</td>
                     <td>".$rows['ProductName']."</td>
-                    <td>".$rows['ProductDescription']."</td>
+                    <td class='prod_desc'>".$rows['ProductDescription']."</td>
                     <td>".$rows['ProductPrice']."</td>
                     <td>".$rows['ProductQuantity']."</td>
                     <td>
