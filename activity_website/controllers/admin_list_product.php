@@ -29,9 +29,9 @@
                 // } else {
 
                     $qInsert = "INSERT INTO `u955154186_db_djstrading`.`products` 
-                        (`ProductCode`, `ProductName`, `ProductPrice`, `ProductQuantity`, `ProductDescription`, `ProductPhoto`) 
+                        (`ProductCode`, `ProductName`, `ProductPrice`, `ProductQuantity`, `ProductDescription`, `ProductPhoto`, `DateAdded`) 
                         VALUES 
-                        ('{$Pcode}', '{$Pname}', '{$Pprice}', '{$Pqty}', '{$Pdesc}', '{$Pimg}')";
+                        ('{$Pcode}', '{$Pname}', '{$Pprice}', '{$Pqty}', '{$Pdesc}', '{$Pimg}','".date("Y-m-d H:i:s")."')";
         
                     $eInsert = mysqli_query($dbConnection, $qInsert);
                     
