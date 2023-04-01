@@ -8,12 +8,12 @@
         $aUname = $_POST['username'];  
         $aPwd = $_POST['password'];
         
-        if( $aUsername == "" || $aPassword == "") {
-            echo "Incomplete credentials";
+        if( $aUname == "" || $aPwd == "") {
+            echo "Incomplete credentials!";
             mysqli_close($dbConnection);
         } else { 
             try {
-                $qSelect = "SELECT `Username` FROM `u955154186_db_djstrading`.`systemusers`  WHERE `Username` = '$aUname'";
+                $qSelect = "SELECT `Username` FROM `u955154186_db_djstrading`.`systemusers`  WHERE `Username` = '$aUname' AND `UserPassword` = '$aPwd'";
                 $eSelect = mysqli_query($dbConnection, $qSelect);
  
                 // $rows = mysqli_fetch_assoc($eStatSelect);
