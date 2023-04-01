@@ -27,9 +27,9 @@
                 } else {
 
                     $qInsert = "INSERT INTO `u955154186_db_djstrading`.`clients` 
-                        (`ClientFullName`, `ClientUsername`, `ClientEmail`, `ClientPassword`, `ClientOTP`, `date_added`) 
+                        (`ClientFullName`, `ClientUsername`, `ClientEmail`, `ClientPassword`, `ClientOTP`, `ClientStatus`, `date_added`) 
                         VALUES 
-                        ('".$sFullname."', '{$sUsername}', '{$sEmail}', '{$sPassword}', '{$OTP}', '".date("Y-m-d H:i:s")."')";
+                        ('".$sFullname."', '{$sUsername}', '{$sEmail}', '{$sPassword}', '{$OTP}', 'inactive', '".date("Y-m-d H:i:s")."')";
         
                     $eInsert = mysqli_query($dbConnection, $qInsert);
                     

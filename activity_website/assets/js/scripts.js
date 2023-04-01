@@ -17,7 +17,7 @@ $("#registerClient").on('click', () => {
         data: sJsonData,
         success: (result) => {
             if( result == "Record successfully saved!") {
-                window.location = "/activity_website/controllers/OTP.php";
+                window.location = "/activity_website/OTP.php";
             } else if ( result == "Incomplete fields") {
                 alert("Please fill out all fields");
             } else if ( result == "Username used") {
@@ -69,7 +69,7 @@ $("#verifyOTP").on('click', () => {
         success: (result) => {
                 if( result == "OTP Verified") {
                     console.log("OTP Verified! Oh Yeah!");
-                    window.location = "/activity_website/controllers/login.php";
+                    window.location = "/activity_website/login.php";
                 } else {
                     alert("OTP not verified, please check you email.")
                     console.log(result);

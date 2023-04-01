@@ -3,7 +3,7 @@
 session_start();
 
     if(!isset($_SESSION['username'])){
-        header('Location: /activity_website/controllers/login.php');
+        header('Location: /activity_website/login.php');
     }else{
         $sUsername = $_SESSION['username'];
     }
@@ -70,17 +70,47 @@ session_start();
                     <div class="item-inf-tex-cont mt-0 pt-0">
                         <p class="item-sold-count">668 Items Left</p>
                     </div>
-                    <div class="item-inf-tex-cont txt-light-inv">
-                        <p class="rating-cont">
-                            <i class="fas fa-star rated"></i>
-                            <i class="fas fa-star rated"></i>
-                            <i class="fas fa-star rated"></i>
-                            <i class="fas fa-star rated"></i>
-                            <i class="fas fa-star unrated"></i>
+                </div>
+            </a>
+
+            <a class="card-attr" href="/activity_website/assets/images/">
+                <div class="item-img-cont">
+                    <img src="/activity_website/assets/images/sampleshirt.svg" class="item-img-main" alt="...">
+                </div>
+                <div class=" item-inf-cont">
+                    <div class="item-inf-tex-cont">
+                        <p class="item-name txt-light-inv">
+                            Sample T-shirt
                         </p>
+                    </div>
+                    <div class="item-inf-tex-cont mb-0 pt-0">
+                        <p class="item-price">$69</p>
+                    </div>
+                    <div class="item-inf-tex-cont mt-0 pt-0">
+                        <p class="item-sold-count">668 Items Left</p>
                     </div>
                 </div>
             </a>
+
+            <a class="card-attr" href="/activity_website/assets/images/">
+                <div class="item-img-cont">
+                    <img src="/activity_website/assets/images/sampleshirt.svg" class="item-img-main" alt="...">
+                </div>
+                <div class=" item-inf-cont">
+                    <div class="item-inf-tex-cont">
+                        <p class="item-name txt-light-inv">
+                            Sample T-shirt
+                        </p>
+                    </div>
+                    <div class="item-inf-tex-cont mb-0 pt-0">
+                        <p class="item-price">$69</p>
+                    </div>
+                    <div class="item-inf-tex-cont mt-0 pt-0">
+                        <p class="item-sold-count">668 Items Left</p>
+                    </div>
+                </div>
+            </a>
+
         </div>
         
     </section>
