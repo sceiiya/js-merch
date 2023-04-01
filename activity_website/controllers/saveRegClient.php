@@ -1,6 +1,6 @@
 <?php
 
-    include("../includes/db-connection.php");
+    include("../includes/db_connection.php");
     
     session_start();
 
@@ -21,7 +21,7 @@
                     VALUES 
                     ('".$sFullname."', '{$sUsername}', '{$sEmail}', '{$sPassword}', '{$OTP}', '".date("Y-m-d H:i:s")."')";
     
-                $eInsert = mysqli_query($dbConn, $qInsert); //connection and query
+                $eInsert = mysqli_query($dbConn, $qInsert);
                 
                     if ($eInsert == true) {
                         $_SESSION['usernamereg'] = $sUsername;
