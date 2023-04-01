@@ -47,7 +47,7 @@
             <button type="button" id="registerClient" class="btn btn-primary btn-block mb-4">Register</button>
 
             <div class="text-center">
-                <p>Already registered? <a href="/activity_website/controllers/login.php">Login here</a></p>
+                <p>Already registered? <a href="/activity_website/login.php">Login here</a></p>
             </div>
         </div>
 
