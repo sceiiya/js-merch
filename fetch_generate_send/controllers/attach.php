@@ -21,15 +21,25 @@
 
     include('../phpmailer/class.phpmailer.php');
 
+// ipalit sa nasa baba
+    $mail->Host 		= 'smtp.hostinger.com';
+    $mail->Username 	= 'wd49p.main@wd49p.com';
+    $mail->Password 	= 'Wd49PM@in';
+    $mail->From 		= 'wd49p.main@wd49p.com';
+    $mail->FromName 	= "DJS Merch";
+    $mail->SMTPSecure 	= 'ssl';
+    $mail->Port 		= 465;
+// ipalit yung nasa baba
+
     $mail = new PHPMailer();
  
     $mail->IsSMTP();
     $mail->SMTPDebug = 2;
     $mail->SMTPAuth 	= true;
+
     $mail->Host 		= 'smtp.gmail.com';
     $mail->Username 	= 'meetscheidj@gmail.com';
     $mail->Password 	= 'yrlmhgyeroxjsile';
-    
     $mail->From 		= 'wd49p.developers@gmail.com';
     $mail->FromName 	= "Sceiiya WD49P";
     $mail->SMTPSecure 	= 'ssl';

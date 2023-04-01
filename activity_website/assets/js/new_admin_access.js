@@ -36,6 +36,7 @@ if (aFullname != '' && aUsername != '' && aEmail != '' && aPosition != ''&& aPos
                 alert("Admin already exist");
                 $('#ConfirmNewAdminModal').modal('hide');
             }else if ("New Admin added!"){
+                console.log(result);
                 alert("New Admin added!");
                 $('#ConfirmNewAdminModal').modal('hide');
             }else{
