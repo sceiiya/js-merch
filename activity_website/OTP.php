@@ -31,7 +31,7 @@
             <button type="button" id="verifyOTP" class="btn btn-primary btn-block mb-4">Verify</button>
 
             <div class="text-center">
-                <p>Send new OTP? <a href="#!">Resend</a></p>
+                <p>Send new OTP? <a href="#!" id="resendOTP">Resend</a></p>
             </div>
         </div>
 

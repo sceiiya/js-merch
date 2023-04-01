@@ -18,7 +18,7 @@
             try {
                 $qSelect = "SELECT `ClientUsername` FROM `u955154186_db_djstrading`.`clients`  WHERE `ClientUsername` = '$sUsername'";
                 $eSelect = mysqli_query($dbConnection, $qSelect);
-                $rows = mysqli_fetch_assoc($eStatSelect);
+                $rows = mysqli_fetch_assoc($eSelect);
                 $nTotalRows = mysqli_num_rows($eSelect);
 
                 if ($rows['ClientUsername'] == $sUsername || $nTotalRows > 0) {
@@ -36,12 +36,12 @@
                         if ($eInsert == true) {
                             $_SESSION['usernamereg'] = $sUsername;
                             $_SESSION['emailreg'] = $sEmail;
-                            echo "Record successfully saved!";
+                            echo true;
                         } else {
                             echo "Failed to process, please call system administrator!";
+                            mysqli_close($dbConnection);
                         }
-
-                        mysqli_close($dbConnection);
+                        
                 }
             } catch(Exception $e) {
                 echo 'Error: ' .$e->getMessage();

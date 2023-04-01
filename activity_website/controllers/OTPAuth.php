@@ -12,7 +12,7 @@
     if ($dbConnection == true) {
         $sOTP = $_POST['otp'];
         try {
-            $qSelect = "SELECT `ClientStatus` FROM `u955154186_db_djstrading`.`clients` WHERE `ClientUsername` = '$sUsername' AND `ClientEmail` = '$sEmail'";
+            $qSelect = "SELECT `ClientOTP` FROM `u955154186_db_djstrading`.`clients` WHERE `ClientUsername` = '$sUsername' AND `ClientEmail` = '$sEmail'";
             $eSelect = mysqli_query($dbConnection, $qSelect);
             $rows = mysqli_fetch_assoc($eSelect);
             $nTotalRows = mysqli_num_rows($eSelect);
