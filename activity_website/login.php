@@ -35,7 +35,7 @@
             <button type="button" id="loginClient" class="btn btn-primary btn-block mb-4">Log In</button>
 
             <div class="text-center">
-                <p>No account? <a href="/activity_website/controllers/register.php">Register here</a></p>
+                <p>No account? <a href="/activity_website/register.php">Register here</a></p>
             </div>
         </div>
 
