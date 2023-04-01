@@ -76,14 +76,6 @@ body {
     width: 200px;
 }
 
-
-:root{
-    --pritheme: #245D1E;
-    --sectheme: #348d2a;
-    --lighttheme: #589451;
-    --whitetheme: #81d179;
-}
-
 body{
     scroll-behavior: smooth;
     background-color: var(--whitetheme);
