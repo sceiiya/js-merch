@@ -32,11 +32,12 @@ if (aFullname != '' && aUsername != '' && aEmail != '' && aPosition != ''&& aPos
                 console.log(result);
             } else if ( result == "Incomplete credentials") {
                 alert("Please fill out all fields");
-            } else if ( result == "Admin already added") {
-                alert("Admin already added");
+            } else if ( result == "Admin already exist") {
+                alert("Admin already exist");
+                $('#ConfirmNewAdminModal').modal('hide');
             }else if ("New Admin added!"){
-                console.log(result);
                 alert("New Admin added!");
+                $('#ConfirmNewAdminModal').modal('hide');
             }else{
                 console.log(result);
             }

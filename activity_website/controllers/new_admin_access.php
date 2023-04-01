@@ -24,7 +24,7 @@
                 $nTotalRows = mysqli_num_rows($eSelect);
 
                 if ($rows['Username'] == $aUname || $nTotalRows > 0) {
-                    echo "Admin already added";
+                    echo "Admin already exist";
                     mysqli_close($dbConnection);
                 } else {
 
