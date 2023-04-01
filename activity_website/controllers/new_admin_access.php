@@ -69,6 +69,8 @@
                             Email: {$aEmail}
                             Password: {$aPwd}
                         
+                            login here: /activity_website/admin/
+
                             ");
                             
                             $mail->IsHTML(true);
