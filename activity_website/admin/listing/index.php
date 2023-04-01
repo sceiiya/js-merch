@@ -16,7 +16,7 @@
   <div class="modal-dialog">
     <div class="modal-content bg-transparent border-0">
 
-      <form class="add-list-cont">
+      <div class="add-list-cont">
 
         <h3 class="txtc mb-4">List Product</h3>
 
@@ -68,7 +68,7 @@
         <!-- Register buttons -->
         <div class="text-center">
         </div>
-      </form>
+</div>
 
     </div>
   </div>
