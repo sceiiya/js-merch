@@ -93,3 +93,45 @@ $('#resendOTP').on('click', () => {
         }
     })
 })
+
+$('#changePass').on('click', () => {
+    $.ajax({
+        type: 'POST',
+        url: "/activity_website/controllers/fetchpass.php",
+        success: (result) => {
+            var objRes = JSON.parse(result);
+            sPassword = $("#oldPass").val(objRes.ClientPassword);
+
+            $('#changePassModal').modal('show');
+
+            $('#saveNewPass').on('click', () => {
+                var sPass = $('#newPass').val();
+
+                var sJsonData = {
+                    password: sPass,
+                }
+
+                $.ajax({
+                    type:'POST',
+                    url: "/activity_website/controllers/changepassword.php",
+                    data: sJsonData,
+                    success: (result) => {
+                        if( result == "error") {
+                            alert("Please call system admnistrator");
+                        } else {
+                            $('#changePassModal').modal('hide');
+                            alert("Password changed successfully!");
+                        }
+                    }
+                })
+            })
+        }
+    })
+})
+
+$('#newPass, #confirmPass').on('keyup', function () {
+    if ($('#newPass').val() == $('#confirmPass').val()) {
+      $('#message').html('Passwords match').css('color', 'green');
+    } else 
+      $('#message').html('Passwords does not match').css('color', 'red');
+  });
