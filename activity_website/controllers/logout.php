@@ -3,5 +3,5 @@
 session_start();
 
 session_destroy();
-header('location: /activity_website/controllers/login.php');
+header('location: /activity_website/login.php');
 
