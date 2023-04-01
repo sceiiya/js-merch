@@ -11,7 +11,7 @@
             $eStatSelect = mysqli_query($dbConnection, $qStatSelect);
             $rows = mysqli_fetch_assoc($eStatSelect);
 
-            if ($rows['ClientStatus'] == "OTP Verified") {
+            if ($rows['ClientStatus'] == "active") {
                 $qSelect = "SELECT `ClientPassword` FROM `u955154186_db_djstrading`.`clients` WHERE `ClientUsername` = '$sUsername'";
                 $eSelect = mysqli_query($dbConnection, $qSelect);
                 $rows2 = mysqli_fetch_assoc($eSelect);
@@ -26,7 +26,7 @@
                     mysqli_close($dbConnection);
                 }
             } else {
-                echo "OTP Not Verified or incorrect credentials";
+                echo "account inactive or incorrect credentials";
                 mysqli_close($dbConnection);
             }
         } catch(Exception $e) {
