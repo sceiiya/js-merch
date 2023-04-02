@@ -282,10 +282,14 @@ body{
 
 .main_adminList{
     align-self: center;
-    width: calc(100%-200px);
+    /* width: calc(100%-200px); */
+    width: 100%;
     margin: 0 100px 0 100px;
     height: 100%;
     border: 2px solid red;
+    left:0;
+    margin-right: 15px;
+    box-sizing: border-box;
 }
 
 .add-list-cont{
@@ -402,4 +406,5 @@ body{
     flex-direction:column; 
     /* align-content: stretch;  */
     /* width: calc(100%-300px); */
+    width: 100%;
 }
