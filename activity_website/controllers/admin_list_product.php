@@ -2,8 +2,6 @@
 
     include("../includes/db_connection.php");
     
-    session_start();
-
     if ($dbConnection == true) {
         $Pcode = $_POST['code'];  
         $Pname = $_POST['name'];

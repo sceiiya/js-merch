@@ -48,7 +48,7 @@ $("#ListProduct").on('click', () => {
             // $('#pQty').attr('value') = '';
             // $('#pDescription').attr('value') = '';
             // $('#pImage').attr('value') = '';
-
+            fetch();
             $('#addtoListModal').modal('hide');
         
             console.log(result);
