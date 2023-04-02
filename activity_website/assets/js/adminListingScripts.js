@@ -88,17 +88,26 @@ $( document ).ready( fetch()
 
 );
 
+// function adminspinshow(){
+//   $('.sppinnermodal').modal('show');
+// }
+// function adminspinhide(){
+//   $('.sppinnermodal').modal('show');
+// }
+
 function fetch() {
-  function adminspinshow(){
-    $('.sppinnermodal').modal('show');
-  }
-  function adminspinhide(){
-    $('.sppinnermodal').modal('show');
-  }
+
 $.ajax({
     type: 'POST',
     url: "/activity_website/controllers/admin_listing_fetch.php",
-    beforeSend: adminspinshow(),
+    beforeSend: function (){
+      var x = document.querySelector('.sppinnermodal');
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    },
     success: (result) => {
         if (result == "error") {
             alert("Please call system admnistrator");
@@ -106,6 +115,8 @@ $.ajax({
             $("#admin_listedProducts").html(result);
         }
     },
-    complete: adminspinhide(),
+    // complete: function(){
+    //   document.querySelector('sppinnermodal').modal('show');
+    // },
 });
 }
