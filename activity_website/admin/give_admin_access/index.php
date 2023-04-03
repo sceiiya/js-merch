@@ -1,6 +1,4 @@
-<?php
-    ob_start();
-?>
+
 
 <!-- <!DOCTYPE html>
 <html lang="en">
@@ -87,7 +85,3 @@
 
 <!-- </html> -->
 
-<?php
-    $admincontent = ob_get_clean();
-    require_once($_SERVER['DOCUMENT_ROOT'] . '/activity_website/admin/dashboard/index.php')
-?>

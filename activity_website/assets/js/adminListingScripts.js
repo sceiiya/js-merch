@@ -10,7 +10,7 @@ $("#ListProduct").on('click', () => {
   var iPrice = $("#pPrice").val();
   var iQty = $("#pQty").val();
   var iDescription = $("#pDescription").val();
-  var iImage = $("#pImage").prop('files')[0];
+  var iImage = $("#pImage").val();
 //image still in develoipmeneent
 
   // var sJsonProduct =   new FormData();
@@ -112,8 +112,12 @@ $.ajax({
             $("#admin_listedProducts").html(result);
         }
     },
-    // complete: function(){
-    //   document.querySelector('sppinnermodal').modal('show');
-    // },
+    complete: function(){
+      var x = document.querySelector('.sppinnermodal');
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }    },
 });
 }
