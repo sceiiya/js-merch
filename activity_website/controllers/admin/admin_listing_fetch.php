@@ -1,5 +1,5 @@
 <?php
-    include("../includes/db_connection.php");
+    include("../../includes/db_connection.php");
 
     $qSelect = "SELECT * FROM $dbDatabase .`products` ORDER BY `ProductId`"; // query for selecting record
     $eSelect = mysqli_query($dbConnection, $qSelect); // executing the query

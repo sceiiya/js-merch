@@ -1,6 +1,6 @@
 <?php
 
-    include("../includes/db_connection.php");
+    include("../../includes/db_connection.php");
     
     if ($dbConnection == true) {
         $Pcode = $_POST['code'];  
