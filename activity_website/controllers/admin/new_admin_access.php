@@ -38,7 +38,7 @@
                         if ($eInsert == true) {
                             echo "New Admin added!";
 
-                            require_once('../phpmailer/class.phpmailer.php');
+                            require_once('../../phpmailer/class.phpmailer.php');
 
                             $mail = new PHPMailer();
                          
