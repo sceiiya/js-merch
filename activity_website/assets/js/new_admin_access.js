@@ -25,7 +25,7 @@ if (aFullname != '' && aUsername != '' && aEmail != '' && aPosition != ''&& aPos
     
     $.ajax({
         type: 'POST',
-        url: "/activity_website/controllers/new_admin_access.php",
+        url: "/activity_website/controllers/admin/new_admin_access.php",
         data: sNewAdminCreds,
         success: (result) => {
             if( result == true) {

@@ -12,7 +12,7 @@
 
     $.ajax({
         type: 'POST',
-        url: "/activity_website/controllers/adminlog.php",
+        url: "/activity_website/controllers/admin/adminlog.php",
         data: sAdminCred,
         success: (result) => {
             if( result == "Logged in succesfully!") {

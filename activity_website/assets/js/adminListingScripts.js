@@ -41,7 +41,7 @@ var sJsonProduct = {
 
   $.ajax({
       type: 'POST',
-      url: "/activity_website/controllers/admin_list_product.php",
+      url: "/activity_website/controllers/admin/admin_list_product.php",
       data: sJsonProduct,
       success: (result) => {
           if( result == "Product Listed!") {

@@ -1,4 +1,13 @@
 <?php
+session_start();
+
+    if(!isset($_SESSION['username'])){
+        header('Location: /activity_website/admin/');
+    }else{
+        $aUname = $_SESSION['username'];
+    }
+?>
+<?php
     ob_start();
 ?>
 
@@ -86,5 +95,5 @@
 <!-- </html> -->
 <?php
     $admincontent = ob_get_clean();
-    require_once($_SERVER['DOCUMENT_ROOT'] . '/activity_website/admin/dashboard/dashboard.php')
-?>
+    require_once($_SERVER['DOCUMENT_ROOT'] . '/activity_website/admin/dashboard/dashboard.php');
+    ?>
