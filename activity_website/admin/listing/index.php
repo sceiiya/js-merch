@@ -9,7 +9,7 @@
     <title>Product Listing</title>
 </head>
 
-<body class="">
+<body class="admin_dashboard">
 
 <div class="modal" id="addtoListModal">
   <div class="modal-dialog">
@@ -81,6 +81,8 @@
   </div>
 </div>
 </div>
+
+<?php include("../../includes/admin/admin_nav.php") ?>
 
 <main class="main_adminList">
 <button id="addProduct">List Product</button>
