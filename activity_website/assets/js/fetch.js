@@ -12,13 +12,13 @@ function fetch() {
     
     $.ajax({
         type: 'POST',
-        url: "controllers/fetch.php",
+        url: "/activity_website/controllers/fetch.php",
         success: (result) => {
             if (result == "error") {
                 alert("Please call system admnistrator");
             } else {
                 // console.log(result);
-                document.getElementById("div-data").innerHTML = result;
+                $(".card-cont-attr").html(result);
             }
         }
     });

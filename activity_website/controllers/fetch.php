@@ -1,39 +1,33 @@
 <?php
-    include("../includes/db_connection.php");
+include("../includes/db_connection.php");
 
-    $qSelect = "SELECT * FROM $dbDatabase.`productorders` ORDER BY ProductName"; // query for selecting record
-    $eSelect = mysqli_query($dbConnection, $qSelect); // executing the query
+$qSelect = "SELECT * FROM $dbDatabase .`products` ORDER BY `ProductId`"; // query for selecting record
+$eSelect = mysqli_query($dbConnection, $qSelect); // executing the query
 
-    if ($eSelect == true) {
-        $sHtml = "
-                <table class='table table-striped table-hover'>
-                    <tr>
-                        <th>Product Name</th>    
-                        <th>Product Code</th>
-                        <th>Product Description</th>
-                        <th>Price</th>
-                        <th>Quantity</th>
-                        <th>Action</th>
-                    </tr>
-            ";
-        while($rows = mysqli_fetch_array($eSelect)) {
+if ($eSelect == true) {
+    $sHtml = "";
+    while ($rows = mysqli_fetch_array($eSelect)) {
 
-            $sHtml .= "<tr>
-                    <td>".$rows['ProductName']."</td>
-                    <td>".$rows['ProductCode']."</td>
-                    <td>".$rows['ProductDescription']."</td>
-                    <td>".$rows['ProductPrice']."</td>
-                    <td>".$rows['ProductQuantity']."</td>
-                    <td>
-                        <button class='btn btn-info'>Edit</button>&nbsp;
-                        <button class='btn btn-danger' onclick=del('".$rows['id']."');>Delete</button>
-                    </td>
-                ";
-        }
-
-        $sHtml .= "</table>";
-        echo $sHtml;
-        
-    } else {
-        echo "Failed to process, please call system administrator!";
+        $sHtml .= '<a class="card-attr" href="/activity_website/assets/images/">
+                <div class="item-img-cont">
+                <img src="/activity_website/assets/images/sampleshirt.svg" class="item-img-main" alt="...">
+                </div>
+                <div class=" item-inf-cont">
+                <div class="item-inf-tex-cont">
+                    <p class="item-name txt-light-inv">
+                    "'.$rows['ProductName'].'"
+                    </p>
+                </div>
+                <div class="item-inf-tex-cont mb-0 pt-0">
+                    <p class="item-price">"'.$rows['ProductPrice'].'"</p>
+                </div>
+                <div class="item-inf-tex-cont mt-0 pt-0">
+                    <p class="item-sold-count">"'.$rows['ProductQuantity'].'"</p>
+                </div>
+                 </div>
+                 </a>';
     }
+    echo $sHtml;
+} else {
+    echo "Failed to process, please call system administrator!";
+}
