@@ -6,54 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <link rel="stylesheet" href="/activity_website/assets/css/styles.css">
-    <!-- <title>Admin access</title> -->
+    <title>Admin Dashboard</title>
 </head>
 
 <body class="admin_dashboard">
 
-<nav class="adminNav">
-
-    <span class="fs-4">DJS Admin</span>
-    <br/><br/>
-  <!-- </a> -->
-  <hr>
-  <br/>
-  
-  <ul class="nav nav-pills flex-column mb-auto">
-    <li class="nav-item">
-      <a href="/activity_website/admin/dashboard/" class="nav-link active" aria-current="page">
-        Dashboard
-      </a>
-    </li>
-    <li>
-      <a href="#" class="nav-link text-white">
-        Orders
-      </a>
-    </li>
-    <li>
-      <a href="/activity_website/admin/listing/" class="nav-link text-white">
-        Products
-      </a>
-    </li>
-    <li>
-      <a href="#" class="nav-link text-white">
-        Customers
-      </a>
-    </li>
-  </ul>
-
-<hr/>
-  <div class="navic-cont-log-r px-2"> <!-- <i class="bi bi-moon"></i> -->
-    <a class="nav-button" href="#"><i
-        class="fas fa-user-circle mx-2 txt-light"></i></a>
-</div>
-
-
-</nav>
+<?php include("../../includes/admin/admin_nav.php") ?>
 
 <main class="admin_maincont">
 
-
+<div class="sppinnermodal modal" style="display: none;">
+<div class="containersp">
+  <div class="outerringg">
+    <div class="innerringg">
+    </div>
+  </div>
+</div>
+</div>
 
       <?php 
 

@@ -33,7 +33,6 @@
                             echo "Failed Listing!";
                             mysqli_close($dbConnection);
                         }
-
                 // }
             } catch(Exception $e) {
                 echo 'Error: ' .$e->getMessage();

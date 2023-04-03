@@ -290,8 +290,9 @@ body{
     height: 100%;
     border: 2px solid red;
     left:0;
-    margin-right: 15px;
+    /* margin-right: 20px 0 20px 0; */
     box-sizing: border-box;
+    align-content: stretch;
 }
 
 .add-list-cont{
@@ -391,7 +392,8 @@ body{
 
 .admin_dashboard{
     display: flex; 
-    flex-direction:row; 
+    flex-direction:row;
+    justify-content: space-between;
     /* align-content: stretch;  */
     height: 100%;
     width: 100% !important;
@@ -408,5 +410,9 @@ body{
     flex-direction:column; 
     /* align-content: stretch;  */
     /* width: calc(100%-300px); */
+    width: 100%;
+}
+
+.admin_listedProducts{
     width: 100%;
 }

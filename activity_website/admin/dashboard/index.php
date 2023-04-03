@@ -7,9 +7,7 @@ session_start();
         $aUname = $_SESSION['username'];
     }
 ?>
-<?php
-    ob_start();
-?>
+
 
 
 <!-- <!DOCTYPE html>
@@ -93,7 +91,3 @@ session_start();
 <script src="/activity_website/assets/js/dashboardscripts.js"></script> -->
 
 <!-- </html> -->
-<?php
-    $admincontent = ob_get_clean();
-    require_once($_SERVER['DOCUMENT_ROOT'] . '/activity_website/admin/dashboard/dashboard.php');
-    ?>
