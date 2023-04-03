@@ -1,16 +1,22 @@
 // ==================== ADMIN isting modal
 
 $('#addProduct').on('click', () => {
+  var iCode = $("#pCode").val("");
+  var iName = $("#pName").val('');
+  var iPrice = $("#pPrice").val('');
+  var iQty = $("#pQty").val('');
+  var iDescription = $("#pDescription").val('');
+  var iImage = $("#pImage").val('');
   $('#addtoListModal').modal('show');
 });
 
 $("#ListProduct").on('click', () => {
-  var iCode = $("#pCode").val();
-  var iName = $("#pName").val();
-  var iPrice = $("#pPrice").val();
-  var iQty = $("#pQty").val();
-  var iDescription = $("#pDescription").val();
-  var iImage = $("#pImage").val();
+  iCode = $("#pCode").val();
+  iName = $("#pName").val();
+  iPrice = $("#pPrice").val();
+  iQty = $("#pQty").val();
+  iDescription = $("#pDescription").val();
+  iImage = $("#pImage").val();
 //image still in develoipmeneent
 
   // var sJsonProduct =   new FormData();
