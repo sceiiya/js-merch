@@ -53,14 +53,7 @@
 
 <main class="admin_maincont">
 
-<div class="sppinnermodal modal" style="display: none;">
-<div class="containersp">
-  <div class="outerringg">
-    <div class="innerringg">
-    </div>
-  </div>
-</div>
-</div>
+
 
       <?php 
 

@@ -77,7 +77,14 @@
   </div>
 </div>
 
-
+<div class="sppinnermodal modal" style="display: none;">
+<div class="containersp">
+  <div class="outerringg">
+    <div class="innerringg">
+    </div>
+  </div>
+</div>
+</div>
 
 <main class="main_adminList">
 <button id="addProduct">List Product</button>
