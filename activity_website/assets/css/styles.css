@@ -103,14 +103,14 @@ body{
 /*----------------- product carde here ------------*/
 
 .card-attr{
-    margin:2px 3px 2px 0px;
+    margin:6px 9px 6px 0px;
     border-radius: 0 0 3vh 1vh;
     box-shadow: 0px 1px 2px #211d2175;
     box-sizing: border-box;
     
     --bs-gutter-x: 1.5rem;
     --bs-gutter-y: 0;
-    width: 250px;
+    width: 290px;
     padding: 0;
 
     vertical-align: top;
@@ -240,7 +240,7 @@ body{
 }
 
 .content-cards-container{
-    height: 1000px;
+    height: 100%;
     flex-direction: row;
     border: 1px solid red;
     --bs-gutter-x: 1.5rem;
@@ -256,7 +256,7 @@ body{
 
 .card-cont-attr{
     margin: auto;
-    height: 100% !important;
+    height: fit-content;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -264,10 +264,10 @@ body{
     grid-template-columns: auto auto auto auto auto auto; */
     box-sizing: border-box;
     padding: 2px 0px 2px 0px;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
     border: 1px solid blue;
-    width: calc(100% - 450px);
+    width: calc(100% - 750px);
 
 }
 /*----------------- product cont container here ------------*/

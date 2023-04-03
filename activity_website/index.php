@@ -112,6 +112,151 @@ session_start();
                     </div>
                 </div>
             </a>
+            <a class="card-attr" href="/activity_website/assets/images/">
+                <div class="item-img-cont">
+                    <img src="/activity_website/assets/images/sampleshirt.svg" class="item-img-main" alt="...">
+                </div>
+                <div class=" item-inf-cont">
+                    <div class="item-inf-tex-cont">
+                        <p class="item-name txt-light-inv">
+                            Sample T-shirt
+                        </p>
+                    </div>
+                    <div class="item-inf-tex-cont mb-0 pt-0">
+                        <p class="item-price">$69</p>
+                    </div>
+                    <div class="item-inf-tex-cont mt-0 pt-0">
+                        <p class="item-sold-count">668 Items Left</p>
+                    </div>
+                </div>
+            </a>
+            <a class="card-attr" href="/activity_website/assets/images/">
+                <div class="item-img-cont">
+                    <img src="/activity_website/assets/images/sampleshirt.svg" class="item-img-main" alt="...">
+                </div>
+                <div class=" item-inf-cont">
+                    <div class="item-inf-tex-cont">
+                        <p class="item-name txt-light-inv">
+                            Sample T-shirt
+                        </p>
+                    </div>
+                    <div class="item-inf-tex-cont mb-0 pt-0">
+                        <p class="item-price">$69</p>
+                    </div>
+                    <div class="item-inf-tex-cont mt-0 pt-0">
+                        <p class="item-sold-count">668 Items Left</p>
+                    </div>
+                </div>
+            </a>
+            <a class="card-attr" href="/activity_website/assets/images/">
+                <div class="item-img-cont">
+                    <img src="/activity_website/assets/images/sampleshirt.svg" class="item-img-main" alt="...">
+                </div>
+                <div class=" item-inf-cont">
+                    <div class="item-inf-tex-cont">
+                        <p class="item-name txt-light-inv">
+                            Sample T-shirt
+                        </p>
+                    </div>
+                    <div class="item-inf-tex-cont mb-0 pt-0">
+                        <p class="item-price">$69</p>
+                    </div>
+                    <div class="item-inf-tex-cont mt-0 pt-0">
+                        <p class="item-sold-count">668 Items Left</p>
+                    </div>
+                </div>
+            </a>
+            <a class="card-attr" href="/activity_website/assets/images/">
+                <div class="item-img-cont">
+                    <img src="/activity_website/assets/images/sampleshirt.svg" class="item-img-main" alt="...">
+                </div>
+                <div class=" item-inf-cont">
+                    <div class="item-inf-tex-cont">
+                        <p class="item-name txt-light-inv">
+                            Sample T-shirt
+                        </p>
+                    </div>
+                    <div class="item-inf-tex-cont mb-0 pt-0">
+                        <p class="item-price">$69</p>
+                    </div>
+                    <div class="item-inf-tex-cont mt-0 pt-0">
+                        <p class="item-sold-count">668 Items Left</p>
+                    </div>
+                </div>
+            </a>
+            <a class="card-attr" href="/activity_website/assets/images/">
+                <div class="item-img-cont">
+                    <img src="/activity_website/assets/images/sampleshirt.svg" class="item-img-main" alt="...">
+                </div>
+                <div class=" item-inf-cont">
+                    <div class="item-inf-tex-cont">
+                        <p class="item-name txt-light-inv">
+                            Sample T-shirt
+                        </p>
+                    </div>
+                    <div class="item-inf-tex-cont mb-0 pt-0">
+                        <p class="item-price">$69</p>
+                    </div>
+                    <div class="item-inf-tex-cont mt-0 pt-0">
+                        <p class="item-sold-count">668 Items Left</p>
+                    </div>
+                </div>
+            </a>
+            <a class="card-attr" href="/activity_website/assets/images/">
+                <div class="item-img-cont">
+                    <img src="/activity_website/assets/images/sampleshirt.svg" class="item-img-main" alt="...">
+                </div>
+                <div class=" item-inf-cont">
+                    <div class="item-inf-tex-cont">
+                        <p class="item-name txt-light-inv">
+                            Sample T-shirt
+                        </p>
+                    </div>
+                    <div class="item-inf-tex-cont mb-0 pt-0">
+                        <p class="item-price">$69</p>
+                    </div>
+                    <div class="item-inf-tex-cont mt-0 pt-0">
+                        <p class="item-sold-count">668 Items Left</p>
+                    </div>
+                </div>
+            </a>
+            <a class="card-attr" href="/activity_website/assets/images/">
+                <div class="item-img-cont">
+                    <img src="/activity_website/assets/images/sampleshirt.svg" class="item-img-main" alt="...">
+                </div>
+                <div class=" item-inf-cont">
+                    <div class="item-inf-tex-cont">
+                        <p class="item-name txt-light-inv">
+                            Sample T-shirt
+                        </p>
+                    </div>
+                    <div class="item-inf-tex-cont mb-0 pt-0">
+                        <p class="item-price">$69</p>
+                    </div>
+                    <div class="item-inf-tex-cont mt-0 pt-0">
+                        <p class="item-sold-count">668 Items Left</p>
+                    </div>
+                </div>
+            </a>
+            
+            <a class="card-attr" href="/activity_website/assets/images/">
+                <div class="item-img-cont">
+                    <img src="/activity_website/assets/images/sampleshirt.svg" class="item-img-main" alt="...">
+                </div>
+                <div class=" item-inf-cont">
+                    <div class="item-inf-tex-cont">
+                        <p class="item-name txt-light-inv">
+                            Sample T-shirt
+                        </p>
+                    </div>
+                    <div class="item-inf-tex-cont mb-0 pt-0">
+                        <p class="item-price">$69</p>
+                    </div>
+                    <div class="item-inf-tex-cont mt-0 pt-0">
+                        <p class="item-sold-count">668 Items Left</p>
+                    </div>
+                </div>
+            </a>
 
             <a class="card-attr" href="/activity_website/assets/images/">
                 <div class="item-img-cont">
