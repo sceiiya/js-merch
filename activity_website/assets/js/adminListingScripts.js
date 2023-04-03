@@ -10,9 +10,27 @@ $("#ListProduct").on('click', () => {
   var iPrice = $("#pPrice").val();
   var iQty = $("#pQty").val();
   var iDescription = $("#pDescription").val();
-  var iImage = $("#pImage").val();
+  var iImage = $("#pImage").prop('files')[0];
+//image still in develoipmeneent
 
-  var sJsonProduct = {
+  // var sJsonProduct =   new FormData();
+  // sJsonProduct.append('code', iCode);
+  // sJsonProduct.append('name', iName);
+  // sJsonProduct.append('price', iPrice);
+  // sJsonProduct.append('qty', iQty);
+  // sJsonProduct.append('description', iDescription);
+  // sJsonProduct.append('image', iImage);
+
+//   {
+//     code: iCode,
+//     name: iName,
+//     price: iPrice,
+//     qty: iQty,
+//     description: iDescription,
+//     image: iImage,
+// };
+
+var sJsonProduct = {
       code: iCode,
       name: iName,
       price: iPrice,
@@ -27,27 +45,6 @@ $("#ListProduct").on('click', () => {
       data: sJsonProduct,
       success: (result) => {
           if( result == "Product Listed!") {
-
-            // var dCode = $("#pCode").html('');
-            // var dName = $("#pName").html('');
-            // var dPrice = $("#pPrice").html('');
-            // var dQty = $("#pQty").html('');
-            // var dDescription = $("#pDescription").html('');
-            // var dImage = $("#pImage").html('');
-
-            // var dCode = ' ';
-            // var dName = ' ';
-            // var dPrice = ' ';
-            // var dQty = ' ';
-            // var dDescription = ' ';
-            // var dImage = ' ';
-
-            // $('#pCode').attr('value') = '';
-            // $('#pName').attr('value') = '';
-            // $('#pPrice').attr('value') = '';
-            // $('#pQty').attr('value') = '';
-            // $('#pDescription').attr('value') = '';
-            // $('#pImage').attr('value') = '';
             fetch();
             $('#addtoListModal').modal('hide');
         
