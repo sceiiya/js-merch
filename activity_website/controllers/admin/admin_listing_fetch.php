@@ -9,8 +9,8 @@
                 <table class='table table-striped table-hover'>
                     <tr>
                         <th style='display:none'>Product ID</th>  
-                        <th>Product Name</th>    
                         <th>Product Code</th>
+                        <th>Product Name</th>    
                         <th style='display:none'>Product Description</th>
                         <th>Price</th>
                         <th>Quantity</th>
