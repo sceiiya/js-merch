@@ -96,7 +96,7 @@ function fetch() {
 
 $.ajax({
     type: 'POST',
-    url: "/activity_website/controllers/admin_listing_fetch.php",
+    url: "/activity_website/controllers/admin/admin_listing_fetch.php",
     beforeSend: function (){
       var x = document.querySelector('.sppinnermodal');
       if (x.style.display === "none") {
