@@ -28,6 +28,10 @@
                         echo "forbidden access";
                         mysqli_close($dbConnection);
                         } elseif (($rows['Username'] == $aUname && $rows['UserPassword'] == $aPwd)){
+                            
+                            $_SESSION['username'] = $aUname;
+                            $_SESSION['password'] = $aPwd;
+                            $_SESSION['accesslevel'] = $rows['UserPosition'];
                             echo 'Logged in succesfully!';
                             mysqli_close($dbConnection);
                         } else{

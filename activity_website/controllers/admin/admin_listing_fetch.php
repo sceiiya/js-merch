@@ -1,7 +1,7 @@
 <?php
     include("../../includes/db_connection.php");
 
-    $qSelect = "SELECT * FROM $dbDatabase .`products` ORDER BY `ProductId`"; // query for selecting record
+    $qSelect = "SELECT * FROM $dbDatabase .`products` WHERE `DateArchived` IS NULL ORDER BY `ProductId` ASC"; // query for selecting record
     $eSelect = mysqli_query($dbConnection, $qSelect); // executing the query
 
     if ($eSelect == true) {
@@ -27,8 +27,8 @@
                     <td>".$rows['ProductPrice']."</td>
                     <td>".$rows['ProductQuantity']."</td>
                     <td>
-                        <button class='btn btn-info'>Modify</button>&nbsp;
-                        <button class='btn btn-danger' onclick=del('".$rows['ProductId']."');>Archive</button>
+                        <button class='btn btn-info' onclick=modify('".$rows['ProductId']."')>Modify</button>&nbsp;
+                        <button class='btn btn-danger' onclick=archive('".$rows['ProductId']."')>Archive</button>
                     </td>
                 ";
         }

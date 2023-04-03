@@ -11,7 +11,7 @@
         $Pimg = $_POST['image'];
         
         if( $Pcode == "" || $Pname == "" || $Pprice == "" || $Pqty == "" || $Pdesc == "" || $Pimg == "") {
-            echo "Incomplete product description";
+            echo "Incomplete";
             mysqli_close($dbConnection);
         } else { 
             try {
