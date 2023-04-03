@@ -116,11 +116,11 @@ $('#changePass').on('click', () => {
                     url: "/activity_website/controllers/changepassword.php",
                     data: sJsonData,
                     success: (result) => {
-                        if( result == "error") {
-                            alert("Please call system admnistrator");
-                        } else {
+                        if( result == "Password saved!") {
                             $('#changePassModal').modal('hide');
                             alert("Password changed successfully!");
+                        } else {
+                            console.log(result);
                         }
                     }
                 })
@@ -135,3 +135,24 @@ $('#newPass, #confirmPass').on('keyup', function () {
     } else 
       $('#message').html('Passwords does not match').css('color', 'red');
   });
+
+
+function addToCart(nId) {
+    var nIndex = {
+        index: nId,
+    }
+
+    $.ajax({
+        type: 'POST',
+        url: "/activity_website/controllers/addtocart.php",
+        data: nIndex,
+        success: (result) => {
+            if( result == "Added to cart") {
+                alert("Added to cart!");
+            } else {
+                console.log(result);
+            }
+        }
+    })
+
+}

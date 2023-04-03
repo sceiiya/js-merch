@@ -1,31 +1,36 @@
 <?php
 include("../includes/db_connection.php");
 
-$qSelect = "SELECT * FROM $dbDatabase .`products` ORDER BY `ProductId`"; // query for selecting record
+$qSelect = "SELECT * FROM $dbDatabase .`products` WHERE `DateArchived` IS NULL ORDER BY `ProductId` ASC"; // query for selecting record
 $eSelect = mysqli_query($dbConnection, $qSelect); // executing the query
 
 if ($eSelect == true) {
     $sHtml = "";
     while ($rows = mysqli_fetch_array($eSelect)) {
+        $price = $rows['ProductPrice'];
+        $priceFormat = number_format($price);
 
-        $sHtml .= '<a class="card-attr" href="/activity_website/assets/images/">
+        $sHtml .= '<div class="card-attr">
                 <div class="item-img-cont">
-                <img src="/activity_website/assets/images/sampleshirt.svg" class="item-img-main" alt="...">
+                <a href="/activity_website/assets/images/"><img src="/activity_website/assets/images/sampleshirt.svg" class="item-img-main" alt="..."></a>
                 </div>
                 <div class=" item-inf-cont">
                 <div class="item-inf-tex-cont">
                     <p class="item-name txt-light-inv">
-                    "'.$rows['ProductName'].'"
+                    '.$rows['ProductName'].'
                     </p>
                 </div>
                 <div class="item-inf-tex-cont mb-0 pt-0">
-                    <p class="item-price">"'.$rows['ProductPrice'].'"</p>
+                    <p class="item-price">₱ '.$priceFormat.'</p>
                 </div>
                 <div class="item-inf-tex-cont mt-0 pt-0">
-                    <p class="item-sold-count">"'.$rows['ProductQuantity'].'"</p>
+                    <p class="item-count">'.$rows['ProductQuantity'].' pieces in stock.</p>
                 </div>
-                 </div>
-                 </a>';
+                <div class="item-inf-tex-cont mt-0 pt-0" id="cartDiv">
+                <button onclick="addToCart('.$rows['ProductId'].')">Add to Cart</button>
+                </div>
+                </div>
+                </div>';
     }
     echo $sHtml;
 } else {
