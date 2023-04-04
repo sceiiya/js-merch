@@ -16,7 +16,6 @@ $("#ListProduct").on('click', () => {
   iPrice = $("#pPrice").val();
   iQty = $("#pQty").val();
   iDescription = $("#pDescription").val();
-  iImage = $("#pImage").val();
 //image still in develoipmeneent
 
   // var sJsonProduct =   new FormData();
@@ -42,7 +41,6 @@ var sJsonProduct = {
       price: iPrice,
       qty: iQty,
       description: iDescription,
-      image: iImage,
   };
 
   $.ajax({
@@ -65,6 +63,33 @@ var sJsonProduct = {
               console.log(result);
           }  
       }
+  });
+
+  // iName = $("#pName").val();
+  iImage = $("#pImage").prop('files')[0];
+  // var file_data = $('#file').prop('files')[0];
+  var form_data = new FormData();
+  form_data.append('name', iName);
+  form_data.append('image', iImage);
+
+  $.ajax({
+    url: '  /activity_website/controllers/admin/admin_list_product_img.php',
+    type: 'post',
+    data: form_data,
+    contentType: false,
+    processData: false,
+    success: (response) => {
+      if (response == "no image") {
+        alert("No image found, you may add image later");
+      } else if (response == "Image Successfully Listed!"){
+        console.log(" Image Listed");
+      }else if (response == "Failed Listing Image!"){
+        alert("something went wrong in your image, you may add image later");
+        console.log(response);
+      }else{
+        console.log(response);
+      }
+    }
   });
 
 });
@@ -165,7 +190,7 @@ function modify(nId) {
               sPprice = $("#productPrice").val(objRes.ProductPrice);
               sPquantity = $("#productQuantity").val(objRes.ProductQuantity);
               sPdescription = $("#productDescription").val(objRes.ProductDescription);
-              sPphoto = $("productPhoto").val(objRes.ProductPhoto)
+              sPphoto = $("productPhoto").val(objRes.ProductPhoto);
               
               $('#modifyModal').modal('show');
               
@@ -201,6 +226,33 @@ function modify(nId) {
                             alert(result);
                           }
                       }
+                  });
+                  
+                    // iName = $("#pName").val();
+                  iImage = $("#productPhoto").prop('files')[0];
+                  // var file_data = $('#file').prop('files')[0];
+                  var form_data = new FormData();
+                  form_data.append('name', sPname);
+                  form_data.append('image', iImage);
+
+                  $.ajax({
+                    url: '  /activity_website/controllers/admin/admin_update_product_img.php',
+                    type: 'post',
+                    data: form_data,
+                    contentType: false,
+                    processData: false,
+                    success: (response) => {
+                      if (response == "no image") {
+                        alert("No image found, you may add image later");
+                      } else if (response == "Image Successfully Listed!"){
+                        console.log(" Image Listed");
+                      }else if (response == "Failed Listing Image!"){
+                        alert("something went wrong in your image, you may add image later");
+                        console.log(response);
+                      }else{
+                        console.log(response);
+                      }
+                    }
                   });
 
               });
