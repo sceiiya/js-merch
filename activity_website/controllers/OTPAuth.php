@@ -17,8 +17,8 @@
             $rows = mysqli_fetch_assoc($eSelect);
             $nTotalRows = mysqli_num_rows($eSelect);
 
-            if ($nTotalRows > 0 && $rows['ClientOTP'] == $sOTP) {
-                $qUpdate = "UPDATE `u955154186_db_djstrading`.`clients` SET `ClientSatus` = 'active' WHERE `ClientUsername` = '{$sUsername}' AND `ClientOTP` =  '{$sOTP}'";
+            if ($rows['ClientOTP'] == $sOTP) {
+                $qUpdate = "UPDATE `u955154186_db_djstrading`.`clients` SET `ClientStatus` = 'active' WHERE `ClientUsername` = '{$sUsername}' AND `ClientOTP` =  '{$sOTP}'";
                 $eUpdate = mysqli_query($dbConnection, $qUpdate);
                 echo "OTP Verified";
                 mysqli_close($dbConnection);

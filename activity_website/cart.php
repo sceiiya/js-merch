@@ -1,16 +1,3 @@
-<?php
-
-session_start();
-
-    if(!isset($_SESSION['username'])){
-        header('Location: /activity_website/login.php');
-    }else{
-        $sUsername = $_SESSION['username'];
-        $sClientId = $_SESSION['clientid'];
-    }
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,20 +14,37 @@ session_start();
 </head>
 
 <body>
-    <?php include("../activity_website/includes/pass_modal.php");?>
 
-    <h2>WELCOME <?php echo $sUsername;?>!</h2>
+    <div class="cart-container cart-page" id="cart-cont">
 
-    <section class="content-cards-container">
-        <div class="card-cont-attr">
 
+
+        <div class="total-price">
+
+            <table>
+                <tr>
+                    <td>Subtotal</td>
+                    <td>600.00 Php</td>
+                </tr>
+                <tr>
+                    <td>VAT</td>
+                    <td>30.00 Php</td>
+                </tr>
+                <tr>
+                    <td>Total</td>
+                    <td>630.00 Php</td>
+                </tr>
+            </table>
         </div>
-        
-    </section>
+        <div id="btnDiv">
+            <button id="btn-purchase">Place Order</button>
+        </div>
+    </div>
 
 </body>
 
 </html>
+
 <script src="/activity_website/assets/js/jquery-3.6.3.min.js"></script>
 <script src="/activity_website/assets/js/fetch.js"></script>
 <script src="/activity_website/assets/js/scripts.js"></script>
