@@ -10,6 +10,7 @@
                     <tr>
                         <th style='display:none'>Product ID</th>  
                         <th>Product Code</th>
+                        <th>Product Image
                         <th>Product Name</th>    
                         <th style='display:none'>Product Description</th>
                         <th>Price</th>
@@ -22,6 +23,7 @@
             $adLPCode .= "<tr>
                     <td style='display:none'>".$rows['ProductId']."</td>
                     <td>".$rows['ProductCode']."</td>
+                    <td class='adPListImgCont'><img class='adPListImg' src='../../admin/listing/product_img/".$rows['ProductPhoto']."'></td>
                     <td>".$rows['ProductName']."</td>
                     <td class='prod_desc'>".$rows['ProductDescription']."</td>
                     <td>".$rows['ProductPrice']."</td>
