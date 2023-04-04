@@ -29,7 +29,8 @@ if ($eSelect == true) {
         $sHtml .= '<tr>
                         <td>
                             <div class="cart-info">
-                                <img src="/activity_website/assets/images/sampleshirt.svg">
+                            <div class="cart_item-img-cont"><img class="cart_item-img-main" src="/activity_website/admin/listing/product_img/'.$rows['ProductPhoto'].'"></div>
+
                                 <div>
                                     <p>'.$rows['ProductName'].'</p>
                                     <small>'.$rows['ProductDescription'].'</small>

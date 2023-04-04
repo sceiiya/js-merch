@@ -245,6 +245,22 @@ body{
 #cartDiv button {
     z-index: 999;
 }
+
+.cart_item-img-cont{
+    box-shadow: 0px 5px 10px -15px #211d2175;  
+    box-sizing: border-box;
+    width: 250px !important;
+    height: 250px;
+    padding: 0;
+}
+
+.cart_item-img-main{
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    object-fit: cover;
+    aspect-ratio: 1;
+}
 /*----------------- product carde here ------------*/
 
 

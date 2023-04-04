@@ -10,7 +10,7 @@
                         <a class="nav-link" href="/activity_website/index.php">Products</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Cart</a>
+                        <a class="nav-link" href="cart.php">Cart</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Profile</a>
