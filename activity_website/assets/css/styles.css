@@ -278,7 +278,7 @@ body{
     justify-content: center;
     border: 1px solid blue;
     width: calc(100% - 750px);
-
+    min-width: 790px;
 }
 /*----------------- product cont container here ------------*/
 
