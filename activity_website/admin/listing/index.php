@@ -164,7 +164,7 @@ if (!isset($_SESSION['username'])) {
 
             <!-- Product Price -->
             <div class="form-outline mb-1">
-              <label for="">Product Image</label>
+              <label for="">Replace Image</label>
               <input type="file" id="productPhoto" class="form-control" accept="image/*" />
             </div>
 
