@@ -454,6 +454,16 @@ body{
     /* align-content: stretch;  */
 }
 
+.adminNav_btn{
+    background-color: var(--pritheme);
+    color:  var(--whitetheme);
+}
+
+.adminNav_btn:active{
+    background-color: var(--whitetheme);
+    color: var(--pritheme);
+}
+
 .admin_maincont{
     display: flex; 
     flex-direction:column; 
