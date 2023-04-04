@@ -17,17 +17,29 @@
 
     print_r($rows['ClientOTP']);
 
-    // $mail = new PHPMailer();
+    $mail = new PHPMailer();
  
-    // $mail->IsSMTP();
-    // $mail->SMTPAuth 	= true;
-    // $mail->Host 		= 'smtp.hostinger.com';
-    // $mail->Username 	= 'wd49p.main@wd49p.com';
-    // $mail->Password 	= 'Wd49PM@in';
-    // $mail->From 		= 'wd49p.main@wd49p.com';
-    // $mail->FromName 	= "WD49P Developers";
-    // $mail->SMTPSecure 	= 'ssl';
-    // $mail->Port 		= 465;
+    $mail->IsSMTP();
+    $mail->SMTPAuth 	= true;
+	$mail->Host 	  = 'smtp.hostinger.com';
+	$mail->Username   = 'sceii@sceiiya.wd49p.com';
+	$mail->Password   = 'tHis_!s=for-testing987';
+	$mail->From 	  = 'sceii@sceiiya.wd49p.com';
+	$mail->FromName   = 'DJS Group';
+	$mail->SMTPSecure = 'ssl';
+	$mail->Port 	  = 465;
+
+    $mail->AddAddress($sEmail, $sUsername);
+    $mail->Subject = "OTP";
+    $mail->Body = nl2br("Your OTP is " . $rows);			
+    $mail->IsHTML(true);
+    
+
+    if(!$mail->Send()) {
+        return "not sent";
+    } else {
+        echo "sent";
+    }
 
 
     // sir jay pakipalitan yung credentials.. eto satin 
@@ -40,15 +52,6 @@
 	// $mail->SMTPSecure = 'ssl';
 	// $mail->Port 	  = 465;
     //^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    // $mail->AddAddress($sEmail, $sUsername);
 
-    // $mail->Subject = "OTP";
-    // $mail->Body = nl2br("Your OTP is " . $rows['ClientOTP']);			
-    // $mail->IsHTML(true);
-    
 
-    // if(!$mail->Send()) {
-    //     return "not sent";
-    // } else {
-    //     echo "sent";
-    // }
+

@@ -161,36 +161,38 @@ $('#btn-purchase').on('click', () => {
 
 })
 
-function compute(nId) {
-    var nIndex = {
-        index: nId,
-    }
+// function compute(nId) {
+//     var nIndex = {
+//         index: nId,
+//     }
 
-    $.ajax({
-        type: 'POST',
-        url: "/activity_website/controllers/client_cart_compute.php",
-        data: nIndex,
-        success: (result) => {
-            var cartArray = JSON.parse(result);
-            console.log(cartArray);
+//     $.ajax({
+//         type: 'POST',
+//         url: "/activity_website/controllers/client_cart_compute.php",
+//         data: nIndex,
+//         success: (result) => {
+//             console.log(JSON.parse(result));
+//         }
+//     })
+// }
+            // var cartArray = JSON.parse(result);
+            // console.log(cartArray);
 
-    //         var allTotal = 0;
+            // var allTotal = 0;
 
     //     for ( i = 0; i < cartArray.length; i++ ) {
     //     var price = cartArray[i];
     //     console.log(cartArray[i]);
-    //     var quantity = $('#input' + i).val();
-    //     console.log(quantity);
+    //     var quantity = document.getElementById('input' + i).value;
+    //     console.log(parseInt(quantity));
     //     console.log(price);
     //     var total = price * quantity;
     //     console.log("total = " + total);
     //     allTotal += total;
     //     console.log("alltotal = " + allTotal);
-    }
+    // }
 
     // document.getElementById('cartTotal').innerHTML = allTotal;
-    //     }
-    })
 
     // var allTotal = 0;
 
@@ -204,4 +206,3 @@ function compute(nId) {
     // }
 
     // document.getElementById('totalPrice').innerHTML = allTotal;
-}
