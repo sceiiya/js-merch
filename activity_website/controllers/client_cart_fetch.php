@@ -12,7 +12,7 @@ $eSelect = mysqli_query($dbConnection, $qSelect);
 if ($eSelect == true) {
     $sumQSelect = "SELECT `ProductPrice` FROM $dbDatabase .`clientcart` WHERE `ClientId` = '$sClientId' AND `DatePurchased` IS NULL ORDER BY `DateAdded` DESC";
     $sumESelect = mysqli_query($dbConnection, $sumQSelect);
-    // $sumArray = mysqli_fetch_assoc($sumESelect);
+
     $sHtml = '
         <table>
             <tr>

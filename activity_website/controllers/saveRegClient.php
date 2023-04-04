@@ -37,6 +37,30 @@
                             $_SESSION['usernamereg'] = $sUsername;
                             $_SESSION['emailreg'] = $sEmail;
                             echo true;
+
+                            $mail = new PHPMailer();
+
+                            $mail->IsSMTP();
+                            $mail->SMTPAuth 	= true;
+                            $mail->Host 	  = 'smtp.hostinger.com';
+                            $mail->Username   = 'sceii@sceiiya.wd49p.com';
+                            $mail->Password   = 'tHis_!s=for-testing987';
+                            $mail->From 	  = 'sceii@sceiiya.wd49p.com';
+                            $mail->FromName   = 'DJS Group';
+                            $mail->SMTPSecure = 'ssl';
+                            $mail->Port 	  = 465;
+
+                            $mail->Subject = "OTP";
+                            $mail->Body = nl2br("Your OTP is " . $rows);			
+                            $mail->IsHTML(true);
+
+
+                            if(!$mail->Send()) {
+                                return "not sent";
+                            } else {
+                                echo "sent";
+                            }
+
                         } else {
                             echo "Failed to process, please call system administrator!";
                             mysqli_close($dbConnection);
