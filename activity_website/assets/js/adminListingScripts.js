@@ -49,7 +49,7 @@ var sJsonProduct = {
       data: sJsonProduct,
       success: (result) => {
           if( result == "Product Listed!") {
-            fetch();
+        
             $('#addtoListModal').modal('hide');
         
             console.log(result);
@@ -82,6 +82,7 @@ var sJsonProduct = {
       if (response == "no image") {
         alert("No image found, you may add image later");
       } else if (response == "Image Successfully Listed!"){
+        fetch();
         console.log(" Image Listed");
       }else if (response == "Failed Listing Image!"){
         alert("something went wrong in your image, you may add image later");
