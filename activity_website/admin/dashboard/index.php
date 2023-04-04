@@ -4,7 +4,9 @@ session_start();
     if(!isset($_SESSION['username'])){
         header('Location: /activity_website/admin/');
     }else{
-        $aUname = $_SESSION['username'];
+      $aUname = $_SESSION['username'];
+      $aPwd = $_SESSION['password'];
+      $sPosition = $_SESSION['accesslevel'];
     }
 ?>
 

@@ -17,7 +17,7 @@ session_start();
             $eUpdate = mysqli_query($dbConnection, $qUpdate);
 
             if ($eUpdate == true) {
-                echo "Password successfully saved!";                
+                echo "Password saved!";                
             } else {
                 echo "Failed to process, please call system administrator!";
             }

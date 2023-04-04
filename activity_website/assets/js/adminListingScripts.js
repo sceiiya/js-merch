@@ -57,8 +57,8 @@ var sJsonProduct = {
             console.log(result);
 
               // window.location = "/activity_website/controllers/OTP.php";
-          } else if ( result == "Incomplete product description") {
-              alert("Please fill out product all details");
+          } else if ( result == "Incomplete") {
+              alert("Please fill out all fields");
           } else if ( result == "Failed Listing!") {
               alert("Failed Listing!");
           }else {
@@ -128,3 +128,84 @@ $.ajax({
 });
 }
 
+function archive(nId) {
+  var nIndex = {
+      index: nId
+      };
+  // console.log(nIndex);
+  $.ajax({
+      type: 'POST',
+      url: "/activity_website/controllers/admin/archive_product.php",
+      data: nIndex,
+      success: (result) => {
+          if (result == "error") {
+              alert("Please call system admnistrator");
+          } else {
+              fetch();
+          }
+      }
+  });
+}
+
+function modify(nId) {
+  var hiddenIndex = $("#indexer").val(nId);
+  console.log(hiddenIndex);
+
+      $.ajax({
+      type: 'POST',
+      url: "/activity_website/controllers/admin/modify_product.php",
+      data: {nid: nId},
+      success: (result) => {
+          if (result == "error") {
+              alert("Please call system admnistrator");
+          } else {
+              var objRes = JSON.parse(result);
+              sPcode = $("#productCode").val(objRes.ProductCode);
+              sPname = $("#productName").val(objRes.ProductName);
+              sPprice = $("#productPrice").val(objRes.ProductPrice);
+              sPquantity = $("#productQuantity").val(objRes.ProductQuantity);
+              sPdescription = $("#productDescription").val(objRes.ProductDescription);
+              sPphoto = $("productPhoto").val(objRes.ProductPhoto)
+              
+              $('#modifyModal').modal('show');
+              
+              $("#Modify").on('click', () => {
+
+                  var nIndex = $("#indexer").val();
+                  var sPcode = $("#productCode").val();
+                  var sPname = $("#productName").val();
+                  var sPprice = $("#productPrice").val();
+                  var sPquantity = $("#productQuantity").val();
+                  var sPdescription = $("#productDescription").val();
+                  var sPphoto = $("#productPhoto").val();
+              
+                  var sJsonData = {
+                      index: nIndex,
+                      pcode: sPcode,
+                      pname: sPname,
+                      pprice: sPprice,
+                      pquantity: sPquantity,
+                      pdescription: sPdescription,
+                      pphoto: sPphoto
+                  }
+                  
+                  $.ajax({
+                      type: 'POST',
+                      url: "/activity_website/controllers/admin/modify_save.php",
+                      data: sJsonData,
+                      success: (result) => {
+                          if (result == "updated") {
+                            $('#modifyModal').modal('hide');
+                            fetch();
+                          }else {
+                            alert(result);
+                          }
+                      }
+                  });
+
+              });
+          }
+      }
+  });
+
+}

@@ -6,6 +6,7 @@ session_start();
         header('Location: /activity_website/login.php');
     }else{
         $sUsername = $_SESSION['username'];
+        $sClientId = $_SESSION['clientid'];
     }
 
 ?>
@@ -30,7 +31,7 @@ session_start();
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Products</a>
+                        <a class="nav-link" href="/activity_website/index.php">Products</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Cart</a>
