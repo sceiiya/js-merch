@@ -33,6 +33,7 @@
                     $eInsert = mysqli_query($dbConnection, $qInsert);
                     
                         if ($eInsert == true) {
+                            echo "Registered";
                             $_SESSION['usernamereg'] = $sUsername;
                             $_SESSION['emailreg'] = $sEmail;
 
@@ -58,10 +59,9 @@
                             ");			
                             $mail->IsHTML(true);
 
-                            // echo "Registered";
 
                             if(!$mail->Send()) {
-                                echo "not sent";
+                                echo 'Error: ' .$e->getMessage();
                             } else {
                                 echo "sent";
                             }
