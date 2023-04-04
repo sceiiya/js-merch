@@ -3,29 +3,27 @@
     include("../../includes/db_connection.php");
     
     if ($dbConnection == true) {
-        $Pcode = $_POST['code'];  
+        $Pimg = $_FILES['image'];
         $Pname = $_POST['name'];
-        $Pprice = $_POST['price'];
-        $Pqty = $_POST['qty'];
-        $Pdesc = $_POST['description'];
-        
-        if( $Pcode == "" || $Pname == "" || $Pprice == "" || $Pqty == "" || $Pdesc == "") {
-            echo "Incomplete";
+
+        if($Pimg == "") {
+            echo "no image";
             mysqli_close($dbConnection);
         } else { 
             try {
-                    $qInsert = "INSERT INTO `u955154186_db_djstrading`.`products` 
-                        (`ProductCode`, `ProductName`, `ProductPrice`, `ProductQuantity`, `ProductDescription`, `DateAdded`) 
-                        VALUES 
-                        ('{$Pcode}', '{$Pname}', '{$Pprice}', '{$Pqty}', '{$Pdesc}','".date("Y-m-d H:i:s")."')";
+                    $ext = pathinfo($Pimg['name'], PATHINFO_EXTENSION);
+                    $Pimgname = uniqid() . '.' . $ext;
+                    move_uploaded_file($Pimg['tmp_name'], '../../admin/listing/product_img/' . $Pimgname);
+        
+                    $qInsert = "UPDATE `u955154186_db_djstrading`.`products` SET `ProductPhoto` = '$Pimgname' WHERE `ProductName` = '$Pname'";
         
                     $eInsert = mysqli_query($dbConnection, $qInsert);
                     
                         if ($eInsert == true) {
-                            echo "Product Listed!";
+                            echo "Image Successfully Listed!";
                             mysqli_close($dbConnection);
                         } else {
-                            echo "Failed Listing!";
+                            echo "Failed Listing Image!";
                             mysqli_close($dbConnection);
                         }
                 // }

@@ -116,11 +116,11 @@ $('#changePass').on('click', () => {
                     url: "/activity_website/controllers/changepassword.php",
                     data: sJsonData,
                     success: (result) => {
-                        if( result == "error") {
-                            alert("Please call system admnistrator");
-                        } else {
+                        if( result == "Password saved!") {
                             $('#changePassModal').modal('hide');
                             alert("Password changed successfully!");
+                        } else {
+                            console.log(result);
                         }
                     }
                 })
@@ -135,3 +135,73 @@ $('#newPass, #confirmPass').on('keyup', function () {
     } else 
       $('#message').html('Passwords does not match').css('color', 'red');
   });
+
+
+function addToCart(nId) {
+    var nIndex = {
+        index: nId,
+    }
+
+    $.ajax({
+        type: 'POST',
+        url: "/activity_website/controllers/addtocart.php",
+        data: nIndex,
+        success: (result) => {
+            if( result == "Added to cart") {
+                alert("Added to cart!");
+            } else {
+                console.log(result);
+            }
+        }
+    })
+
+}
+
+$('#btn-purchase').on('click', () => {
+
+})
+
+function compute(nId) {
+    var nIndex = {
+        index: nId,
+    }
+
+    $.ajax({
+        type: 'POST',
+        url: "/activity_website/controllers/client_cart_compute.php",
+        data: nIndex,
+        success: (result) => {
+            var cartArray = JSON.parse(result);
+            console.log(cartArray);
+
+    //         var allTotal = 0;
+
+    //     for ( i = 0; i < cartArray.length; i++ ) {
+    //     var price = cartArray[i];
+    //     console.log(cartArray[i]);
+    //     var quantity = $('#input' + i).val();
+    //     console.log(quantity);
+    //     console.log(price);
+    //     var total = price * quantity;
+    //     console.log("total = " + total);
+    //     allTotal += total;
+    //     console.log("alltotal = " + allTotal);
+    }
+
+    // document.getElementById('cartTotal').innerHTML = allTotal;
+    //     }
+    })
+
+    // var allTotal = 0;
+
+    // for ( i = 0; i < arrayTwo.length; i++ ) {
+    //     var price = arrayTwo[i].price;
+    //     var quantity = document.getElementById('input' + i).value;
+    //     console.log(quantity);
+    //     console.log(price);
+    //     var total = price * quantity;
+    //     allTotal += total;
+    // }
+
+    // document.getElementById('totalPrice').innerHTML = allTotal;
+}
