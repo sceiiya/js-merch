@@ -6,14 +6,12 @@ session_start();
 $sUsername = $_SESSION['username'];
 $sClientId = $_SESSION['clientid'];
 
-$qSelect = "SELECT * FROM $dbDatabase .`clientcart` WHERE `ClientId` = '$sClientId' AND `DatePurchased` IS NULL ORDER BY `DateAdded` DESC";
-$eSelect = mysqli_query($dbConnection, $qSelect);
 
 if ($dbConnection == true) {
     // $nIndex = $_POST['index'];
 
     // $qSelect = "SELECT `ProductPrice` FROM $dbDatabase .`clientcart` WHERE `ClientId` = '$sClientId' AND `DatePurchased` IS NULL ORDER BY `DateAdded` DESC";
-    $qSelect = "SELECT * FROM $dbDatabase .`clientcart` WHERE `ClientId` = '$sClientId' AND `DatePurchased` IS NULL ORDER BY `DateAdded` DESC";
+    $qSelect = "SELECT * FROM $dbDatabase .`clientcart` WHERE `ClientId` = '$sClientId' AND `DateRemoved` IS NULL ORDER BY `DateAdded` DESC";
     $eSelect = mysqli_query($dbConnection, $qSelect);
 
     $data = array();

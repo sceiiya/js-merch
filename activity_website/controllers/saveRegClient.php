@@ -19,8 +19,15 @@
                 $eSelect = mysqli_query($dbConnection, $qSelect);
                 $rows = mysqli_fetch_assoc($eSelect);
                 $nTotalRows = mysqli_num_rows($eSelect);
+
+
+ 
+
+
+
                     
                 if ($rows['ClientUsername'] == $sUsername || $nTotalRows > 0) {
+
                     echo "Username used";
                     mysqli_close($dbConnection);
                 } else {
@@ -53,6 +60,7 @@
                             $mail->SMTPSecure = 'ssl';
                             $mail->Port 	  = 465;
 
+                            $mail->AddAddress($sEmail, $sUsername);
                             $mail->Subject = "OTP";
                             $mail->Body = nl2br("
                             Your OTP is $OTP

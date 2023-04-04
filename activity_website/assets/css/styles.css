@@ -523,7 +523,7 @@ td {
 }
 
 td input {
-    width: 70px;
+    width: 50px;
     height: 30px;
     padding: 5px;
     text-align: center;
@@ -537,9 +537,18 @@ td a {
 }
 
 td img {
-    width: 110px;
-    height: 110px;
+    width: 140px !important;
+    height: 140px !important;
     margin-right: 10px;
+}
+
+.checkout_cart-cont{
+    box-shadow: 0px 5px 10px -15px #211d2175;  
+    box-sizing: border-box;
+    width: 140px;
+    height: 140px;
+    padding: 0;
+    margin: 0px 10px 0px 10px;
 }
 
 .total-price {
@@ -568,7 +577,7 @@ th:last-child {
     padding: 10px;
 }
 
-#btn-purchase {
+#btn-order {
     border-radius: 5px;
     border: 1px solid #35872c;
     background-color: #35872c;
@@ -576,4 +585,22 @@ th:last-child {
 }
 
 
+
+
 /* End of Client Cart */
+
+/* Start of Checkout */
+
+#checkout-container {
+    display: flex;
+    width: 100%;
+
+    /* border: 1px solid red; */
+}
+
+#modalTotal {
+    text-align: center;
+    font-size: 20px !important;
+}
+
+/* End of Checkout */

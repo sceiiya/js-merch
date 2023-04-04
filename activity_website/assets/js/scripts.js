@@ -1,33 +1,3 @@
-$("#registerClient").on('click', () => {
-    var sFullname = $("#fullNameClient").val();
-    var sUsername = $("#usernameClient").val();
-    var sEmail = $("#emailClient").val();
-    var sPassword = $("#passwordClient").val();
-
-    var sJsonData = {
-        fullname: sFullname,
-        username: sUsername,
-        email: sEmail,
-        password: sPassword,
-    };
-
-    $.ajax({
-        type: 'POST',
-        url: "/activity_website/controllers/saveRegClient.php",
-        data: sJsonData,
-        success: (result) => {
-            if( result == true) {
-                console.log(result);
-            } else if ( result == "Incomplete fields") {
-                alert("Please fill out all fields");
-            } else if ( result == "Username used") {
-                alert("Username already used");
-            }else {
-                window.location = "/activity_website/OTP.php";
-            }  
-        }
-    });
-});
 
 $("#loginClient").on('click', () => {
     var sUsername = $("#loginUsername").val();
@@ -157,52 +127,4 @@ function addToCart(nId) {
 
 }
 
-$('#btn-purchase').on('click', () => {
 
-})
-
-// function compute(nId) {
-//     var nIndex = {
-//         index: nId,
-//     }
-
-//     $.ajax({
-//         type: 'POST',
-//         url: "/activity_website/controllers/client_cart_compute.php",
-//         data: nIndex,
-//         success: (result) => {
-//             console.log(JSON.parse(result));
-//         }
-//     })
-// }
-            // var cartArray = JSON.parse(result);
-            // console.log(cartArray);
-
-            // var allTotal = 0;
-
-    //     for ( i = 0; i < cartArray.length; i++ ) {
-    //     var price = cartArray[i];
-    //     console.log(cartArray[i]);
-    //     var quantity = document.getElementById('input' + i).value;
-    //     console.log(parseInt(quantity));
-    //     console.log(price);
-    //     var total = price * quantity;
-    //     console.log("total = " + total);
-    //     allTotal += total;
-    //     console.log("alltotal = " + allTotal);
-    // }
-
-    // document.getElementById('cartTotal').innerHTML = allTotal;
-
-    // var allTotal = 0;
-
-    // for ( i = 0; i < arrayTwo.length; i++ ) {
-    //     var price = arrayTwo[i].price;
-    //     var quantity = document.getElementById('input' + i).value;
-    //     console.log(quantity);
-    //     console.log(price);
-    //     var total = price * quantity;
-    //     allTotal += total;
-    // }
-
-    // document.getElementById('totalPrice').innerHTML = allTotal;

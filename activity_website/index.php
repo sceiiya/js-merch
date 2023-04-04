@@ -7,6 +7,8 @@ session_start();
     }else{
         $sUsername = $_SESSION['username'];
         $sClientId = $_SESSION['clientid'];
+        $fullName = $_SESSION['fullname'];
+        $email = $_SESSION['email'];
     }
 
 ?>
