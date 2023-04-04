@@ -1,4 +1,5 @@
 <?php
+    include('../phpmailer/class.phpmailer.php');
     include("../includes/db_connection.php");
     
     session_start();
@@ -19,8 +20,10 @@
                 $eSelect = mysqli_query($dbConnection, $qSelect);
                 $rows = mysqli_fetch_assoc($eSelect);
                 $nTotalRows = mysqli_num_rows($eSelect);
+
+                if($rows['ClientUsername'] != null){
                     
-                if ($rows['ClientUsername'] == $sUsername || $nTotalRows > 0) {
+                }elseif ($rows['ClientUsername'] == $sUsername || $nTotalRows > 0) {
                     echo "Username used";
                     mysqli_close($dbConnection);
                 } else {
@@ -36,14 +39,11 @@
                             $_SESSION['usernamereg'] = $sUsername;
                             $_SESSION['emailreg'] = $sEmail;
 
-                            require_once('../phpmailer/class.phpmailer.php');
 
                             $mail = new PHPMailer();
 
                             $mail->IsSMTP();
-                            $mail->SMTPDebug = 2;
                             $mail->SMTPAuth   = true;
-
                             $mail->Host 	  = 'smtp.hostinger.com';
                             $mail->Username   = 'sceii@sceiiya.wd49p.com';
                             $mail->Password   = 'tHis_!s=for-testing987';
@@ -53,15 +53,13 @@
                             $mail->Port 	  = 465;
 
                             $mail->Subject = "OTP";
-                            $mail->Body = nl2br("
-                            Your OTP is $OTP
-                            ");			
+                            $mail->Body = nl2br("Your OTP is " . $OTP);			
                             $mail->IsHTML(true);
 
-                            // echo "Registered";
+                            echo "Registered";
 
                             if(!$mail->Send()) {
-                                echo "not sent";
+                                return "not sent";
                             } else {
                                 echo "sent";
                             }
