@@ -12,7 +12,7 @@ if ($eSelect == true) {
 
         $sHtml .= '<div class="card-attr">
                 <div class="item-img-cont">
-                <a href="/activity_website/assets/images/"><img src="/activity_website/assets/images/sampleshirt.svg" class="item-img-main" alt="..."></a>
+                <div class="item-img-cont"><img class="item-img-main" src="/activity_website/admin/listing/product_img/'.$rows['ProductPhoto'].'"></div>
                 </div>
                 <div class=" item-inf-cont">
                 <div class="item-inf-tex-cont">

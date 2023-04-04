@@ -172,6 +172,17 @@ body{
     margin: 1px;
 }
 
+/* .PListImgCont{
+    width: 150px;
+    height: 150px;
+}
+
+.PListImg{
+    width: 150px;
+    height: 150px;
+    object-fit:cover;
+} */
+
 .item-name{
     font-weight: 500;
     box-sizing: border-box;
@@ -296,13 +307,14 @@ body{
     align-self: center;
     /* width: calc(100%-200px); */
     width: 100%;
-    margin: 0 100px 0 100px;
+    margin: 0 100px 0 400px;
     height: 100%;
     border: 2px solid red;
-    left:0;
     /* margin-right: 20px 0 20px 0; */
     box-sizing: border-box;
     align-content: stretch;
+    right: 0;
+    position: relative;
 }
 
 .add-list-cont{
@@ -338,6 +350,16 @@ body{
     display: none;
 }
 
+.adPListImgCont{
+    width: 150px;
+    height: 150px;
+}
+
+.adPListImg{
+    width: 150px;
+    height: 150px;
+    object-fit:cover;
+}
 
 /* spinner and modalll */
 
@@ -412,6 +434,7 @@ body{
 .adminNav{
     width: 300px;
     height: 100%;
+    position: fixed;
     /* align-content: stretch;  */
 }
 
