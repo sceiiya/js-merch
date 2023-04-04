@@ -12,7 +12,7 @@
             $rows = mysqli_fetch_assoc($eStatSelect);
 
             if ($rows['ClientStatus'] == "active") {
-                $qSelect = "SELECT `ClientPassword`, `ClientId` FROM `u955154186_db_djstrading`.`clients` WHERE `ClientUsername` = '$sUsername'";
+                $qSelect = "SELECT `ClientPassword`, `ClientId`, `ClientFullName`, `ClientEmail` FROM `u955154186_db_djstrading`.`clients` WHERE `ClientUsername` = '$sUsername'";
                 $eSelect = mysqli_query($dbConnection, $qSelect);
                 $rows2 = mysqli_fetch_assoc($eSelect);
                 $nTotalRows = mysqli_num_rows($eSelect);
@@ -20,6 +20,8 @@
                 if ($nTotalRows > 0 && $rows2['ClientPassword'] == $sPassword) {
                     $_SESSION['username'] = $sUsername;
                     $_SESSION['clientid'] = $rows2['ClientId'];    
+                    $_SESSION['fullname'] = $rows2['ClientFullName'];
+                    $_SESSION['email'] = $rows2['ClientEmail'];
                     echo "Login Success";
                     mysqli_close($dbConnection);
                 }else{

@@ -22,7 +22,7 @@
                 $nTotalRows = mysqli_num_rows($eSelect);
 
                 if($rows['ClientUsername'] != null){
-                    
+
                 }elseif ($rows['ClientUsername'] == $sUsername || $nTotalRows > 0) {
                     echo "Username used";
                     mysqli_close($dbConnection);
@@ -52,6 +52,7 @@
                             $mail->SMTPSecure = 'ssl';
                             $mail->Port 	  = 465;
 
+                            $mail->AddAddress($sEmail, $sUsername);
                             $mail->Subject = "OTP";
                             $mail->Body = nl2br("Your OTP is " . $OTP);			
                             $mail->IsHTML(true);
