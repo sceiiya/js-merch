@@ -25,7 +25,6 @@
 </div>
 </div>
 
-      <?php  ?>
 </main>
 </body>
 
@@ -34,5 +33,6 @@
 <script src="/activity_website/assets/js/adminListingScripts.js"></script>
 <script src="/activity_website/assets/js/scripts.js"></script>
 <script src="/activity_website/assets/js/dashboardscripts.js"></script>
-
+<script src="/activity_website/assets/js/admin_navs.js"></script>
+<script src="/activity_website/assets/js/admin_access_validation.js"></script>
 </html>

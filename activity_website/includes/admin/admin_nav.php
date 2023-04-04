@@ -8,23 +8,28 @@
   
   <ul class="nav nav-pills flex-column mb-auto">
     <li class="nav-item">
-      <a href="/activity_website/admin/dashboard/" class="nav-link adminNav_btn" aria-current="page">
+      <a href="/activity_website/admin/dashboard/" class="nav-link adminNav_btn active" aria-current="page">
         Dashboard
       </a>
     </li>
     <li>
-      <a href="/activity_website/admin/orders/" class="nav-link adminNav_btn">
-        Orders
-      </a>
-    </li>
-    <li>
-      <a href="/activity_website/admin/listing/" class="nav-link adminNav_btn">
+      <a href="/activity_website/admin/listing/" class="nav-link adminNav_btn" id=''>
         Products
       </a>
     </li>
     <li>
-      <a href="/activity_website/admin/clients/" class="nav-link adminNav_btn">
+      <a href="/activity_website/admin/clients/" class="nav-link adminNav_btn" id=''>
         Customers
+      </a>
+    </li>
+    <li>
+      <a href="/activity_website/admin/orders/" class="nav-link adminNav_btn" id=''>
+        Orders
+      </a>
+    </li>
+    <li>
+      <a href="/activity_website/admin/colleague/" class="nav-link adminNav_btn" id=''>
+        Colleague
       </a>
     </li>
   </ul>
@@ -37,5 +42,3 @@
 
 
 </nav>
-
-<script src="/activity_website/assets/js/admin_navs.js"></script>

@@ -320,6 +320,7 @@ body{
 /* admin listing here */
 
 .main_adminList{
+    top:20px !important;
     align-self: center;
     /* width: calc(100%-200px); */
     width: 100%;
@@ -330,7 +331,7 @@ body{
     box-sizing: border-box;
     align-content: stretch;
     right: 0;
-    position: relative;
+    /* position: relative; */
 }
 
 .add-list-cont{
@@ -457,10 +458,11 @@ body{
 .adminNav_btn{
     background-color: var(--pritheme);
     color:  var(--whitetheme);
+    margin: 4px 0 4px 0;;
 }
 
 .adminNav_btn:active{
-    background-color: var(--whitetheme);
+    background-color: var(--whitetheme) !important;
     color: var(--pritheme);
 }
 

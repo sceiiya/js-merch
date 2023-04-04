@@ -84,6 +84,7 @@
 <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
 <script src="/activity_website/assets/js/new_admin_access.js"></script>
 <script src="/activity_website/assets/js/scripts.js"></script>
-
+<script src="/activity_website/assets/js/admin_navs.js"></script>
+<script src="/activity_website/assets/js/admin_access_validation.js"></script>
 </html>
 

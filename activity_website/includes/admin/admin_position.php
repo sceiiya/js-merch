@@ -1,14 +1,18 @@
-<div id="access_identifier" style="display:none;">
+<input id="access_identity" style="display:block; position:fixed; right:0; top:10px;">
 
-</div>
+</input>
+<input id="access_identifier" style="display:block; position:fixed; right:0; top: 40px;">
+
+</input>
+
+<button id="my_adminLogout" style="position:fixed; left:10px; bottom:8px; z-index:99;">Log out</button>
 <?php
-    $my_adUname = $_SESSION['username'];
-    $my_adPass = $_SESSION['password'];
-    $my_adPosition = $_SESSION['accesslevel'];
+session_start();
+if (!isset($_SESSION['username'])) {
+    header('Location: /activity_website/admin/');
+  } else {
+    $aUname = $_SESSION['username'];
+    $aPwd = $_SESSION['password'];
+    $sPosition = $_SESSION['accesslevel'];
+  }
 ?>
-
-echo $my_adUname;
-echo $my_adPass;
-echo $my_adPosition;
-
-<script src="/activity_website/assets/js/admin_access_validation.js"></script>

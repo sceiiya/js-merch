@@ -29,6 +29,10 @@
                         mysqli_close($dbConnection);
                         } elseif (($rows['Username'] == $aUname && $rows['UserPassword'] == $aPwd)){
                             
+                            // $aUname = $_SESSION['username'];
+                            // $aPwd = $_SESSION['password'];
+                            // $sPosition = $_SESSION['accesslevel'];
+                              
                             $_SESSION['username'] = $aUname;
                             $_SESSION['password'] = $aPwd;
                             $_SESSION['accesslevel'] = $rows['UserPosition'];

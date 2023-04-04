@@ -1,3 +1,7 @@
+$("#my_adminLogout").on('click', ()=>{
+    window.location = "/activity_website/controllers/admin/adminLog_out.php";
+})
+
 $('#addNewAdmin').on('click', () => {
     $('#ConfirmNewAdminModal').modal('show');
 });
