@@ -1,4 +1,5 @@
 <?php
+    include('../phpmailer/class.phpmailer.php');
     include("../includes/db_connection.php");
     
     session_start();
@@ -20,14 +21,9 @@
                 $rows = mysqli_fetch_assoc($eSelect);
                 $nTotalRows = mysqli_num_rows($eSelect);
 
-
- 
-
-
-
+                if($rows['ClientUsername'] != null){
                     
-                if ($rows['ClientUsername'] == $sUsername || $nTotalRows > 0) {
-
+                }elseif ($rows['ClientUsername'] == $sUsername || $nTotalRows > 0) {
                     echo "Username used";
                     mysqli_close($dbConnection);
                 } else {
@@ -40,18 +36,14 @@
                     $eInsert = mysqli_query($dbConnection, $qInsert);
                     
                         if ($eInsert == true) {
-                            echo "Registered";
                             $_SESSION['usernamereg'] = $sUsername;
                             $_SESSION['emailreg'] = $sEmail;
 
-                            require_once('../phpmailer/class.phpmailer.php');
 
                             $mail = new PHPMailer();
 
                             $mail->IsSMTP();
-                            $mail->SMTPDebug = 2;
                             $mail->SMTPAuth   = true;
-
                             $mail->Host 	  = 'smtp.hostinger.com';
                             $mail->Username   = 'sceii@sceiiya.wd49p.com';
                             $mail->Password   = 'tHis_!s=for-testing987';
@@ -60,16 +52,14 @@
                             $mail->SMTPSecure = 'ssl';
                             $mail->Port 	  = 465;
 
-                            $mail->AddAddress($sEmail, $sUsername);
                             $mail->Subject = "OTP";
-                            $mail->Body = nl2br("
-                            Your OTP is $OTP
-                            ");			
+                            $mail->Body = nl2br("Your OTP is " . $OTP);			
                             $mail->IsHTML(true);
 
+                            echo "Registered";
 
                             if(!$mail->Send()) {
-                                echo 'Error: ' .$e->getMessage();
+                                return "not sent";
                             } else {
                                 echo "sent";
                             }
