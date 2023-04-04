@@ -96,6 +96,7 @@ if (!isset($_SESSION['username'])) {
   </div>
 
   <?php include("../../includes/admin/admin_nav.php") ?>
+  <?php include("../../includes/admin/admin_position.php") ?>
 
   <main class="main_adminList">
     <button id="addProduct">List Product</button>

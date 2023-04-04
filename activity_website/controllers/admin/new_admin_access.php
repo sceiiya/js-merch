@@ -46,13 +46,13 @@
                             $mail->SMTPDebug = 2;
                             $mail->SMTPAuth 	= true;
                         
-                            $mail->Host 		= 'smtp.hostinger.com';
-                            $mail->Username 	= 'wd49p.main@wd49p.com';
-                            $mail->Password 	= 'Wd49PM@in';
-                            $mail->From 		= 'wd49p.main@wd49p.com';
-                            $mail->FromName 	= "DJS Merch";
-                            $mail->SMTPSecure 	= 'ssl';
-                            $mail->Port 		= 465;
+                            $mail->Host 	  = 'smtp.hostinger.com';
+                            $mail->Username   = 'sceii@sceiiya.wd49p.com';
+                            $mail->Password   = 'tHis_!s=for-testing987';
+                            $mail->From 	  = 'sceii@sceiiya.wd49p.com';
+                            $mail->FromName   = "Test Sender from Sceii";
+                            $mail->SMTPSecure = 'ssl';
+                            $mail->Port 	  = 465;                        
                             
                             $mail->AddCC("{$aEmail}", "{$aName}");
                         

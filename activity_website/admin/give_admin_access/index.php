@@ -11,6 +11,9 @@
 
 <body class="admin_dashboard">
 
+<?php include("../../includes/admin/admin_nav.php") ?>
+<?php include("../../includes/admin/admin_position.php") ?>
+
 <div class="modal" id="ConfirmNewAdminModal">
   <div class="modal-dialog">
     <div class="modal-content bg-transparent border-0">

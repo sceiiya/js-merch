@@ -9,6 +9,8 @@
     <title>Admin access</title>
 </head>
 
+<?php include("../../includes/admin/admin_position.php") ?>
+
 <body class="">
 
 <main class="admin-logAccess">

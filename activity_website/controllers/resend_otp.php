@@ -28,7 +28,18 @@
     // $mail->FromName 	= "WD49P Developers";
     // $mail->SMTPSecure 	= 'ssl';
     // $mail->Port 		= 465;
-    
+
+
+    // sir jay pakipalitan yung credentials.. eto satin 
+    //˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅˅
+	// $mail->Host 	  = 'smtp.hostinger.com';
+	// $mail->Username   = 'sceii@sceiiya.wd49p.com';
+	// $mail->Password   = 'tHis_!s=for-testing987';
+	// $mail->From 	  = 'sceii@sceiiya.wd49p.com';
+	// $mail->FromName   = "Test Sender from Sceii";
+	// $mail->SMTPSecure = 'ssl';
+	// $mail->Port 	  = 465;
+    //^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
     // $mail->AddAddress($sEmail, $sUsername);
 
     // $mail->Subject = "OTP";
