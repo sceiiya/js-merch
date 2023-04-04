@@ -1,6 +1,7 @@
 window.addEventListener('load', () => {
 
     fetch();
+    cartfetch()
 
 });
 
@@ -22,4 +23,26 @@ function fetch() {
             }
         }
     });
+}
+
+function cartfetch() {
+    
+    $.ajax({
+        type: 'POST',
+        url: "/activity_website/controllers/client_cart_fetch.php",
+        success: (result) => {
+            if (result == "error") {
+                alert("Please call system admnistrator");
+            } else {
+                // console.log(result);
+                $("#cart-cont").html(result);
+            }
+        }
+    });
+}
+
+function removeFromCart(nId) {
+    var nIndex = {
+        index: nId,
+    }
 }
