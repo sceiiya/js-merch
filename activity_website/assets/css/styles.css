@@ -279,7 +279,7 @@ body{
 .content-cards-container{
     height: 100%;
     flex-direction: row;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     --bs-gutter-x: 1.5rem;
     --bs-gutter-y: 0;
     width: 100%;
@@ -303,7 +303,7 @@ body{
     padding: 2px 0px 2px 0px;
     /* align-items: center; */
     justify-content: center;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     width: calc(100% - 750px);
     min-width: 790px;
 }
