@@ -10,7 +10,7 @@
                     <tr>
                         <th style='display:none'>Product ID</th>  
                         <th>Product Code</th>
-                        <th>Product Image
+                        <th>Product Image</th>
                         <th>Product Name</th>    
                         <th style='display:none'>Product Description</th>
                         <th>Price</th>
