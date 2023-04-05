@@ -16,24 +16,6 @@ $("#ListProduct").on('click', () => {
   iPrice = $("#pPrice").val();
   iQty = $("#pQty").val();
   iDescription = $("#pDescription").val();
-//image still in develoipmeneent
-
-  // var sJsonProduct =   new FormData();
-  // sJsonProduct.append('code', iCode);
-  // sJsonProduct.append('name', iName);
-  // sJsonProduct.append('price', iPrice);
-  // sJsonProduct.append('qty', iQty);
-  // sJsonProduct.append('description', iDescription);
-  // sJsonProduct.append('image', iImage);
-
-//   {
-//     code: iCode,
-//     name: iName,
-//     price: iPrice,
-//     qty: iQty,
-//     description: iDescription,
-//     image: iImage,
-// };
 
 var sJsonProduct = {
       code: iCode,
@@ -97,32 +79,7 @@ var sJsonProduct = {
 
 $( document ).ready( fetch()
 
-//   () => {
-
-//   $.ajax({
-//     type: 'POST',
-//     url: "/activity_website/controllers/admin_listing_fetch.php",
-//     success: (result) => {
-//         if( result == "Record successfully saved!") {
-
-//         } else if ( result == "Incomplete product description") {
-//             alert("Please fill out product all details");
-//         } else {
-//           $("").innerHTML = result;
-//         }  
-//     }
-// });
-
-// }
-
 );
-
-// function adminspinshow(){
-//   $('.sppinnermodal').modal('show');
-// }
-// function adminspinhide(){
-//   $('.sppinnermodal').modal('show');
-// }
 
 function fetch() {
 
@@ -263,7 +220,9 @@ function modify(nId) {
 
 }
 
-$(".btn-danger").on("click",function () {
+// validator dedpende sa position if magtuloy yung gusto nyang gawin 
+//hindi pa nalalagay yung arch class sa kahit anong elements..
+$(".archhh").on("click",function () {
   var getPositionn = $("#access_identifier").val();
       
   if (getPositionn == "co-founder"){

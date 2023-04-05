@@ -65,7 +65,7 @@ $(document).ready(() => {
 var getPosition = $("#access_identifier").val();
     
 if (getPosition != "co-founder"){
-  var p = document.querySelector('.ADDnewAdmin');
+  var p = document.querySelector('#ADDnewAdmin');
   p.style.display = "none";
 }
 
