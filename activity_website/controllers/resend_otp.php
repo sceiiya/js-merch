@@ -23,7 +23,7 @@
     $mail->SMTPAuth 	= true;
 	$mail->Host 	  = 'smtp.hostinger.com';
 	$mail->Username   = 'sceii@sceiiya.wd49p.com';
-	$mail->Password   = 'tHis_!s=for-testing987';
+	$mail->Password   = 'YoumUst_not_Us3tH!sforOth3r_pUrpo5es';
 	$mail->From 	  = 'sceii@sceiiya.wd49p.com';
 	$mail->FromName   = 'DJS Group';
 	$mail->SMTPSecure = 'ssl';
