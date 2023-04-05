@@ -103,4 +103,10 @@ dist
 # TernJS port file
 .tern-port
 
-attach.php
+fetch_generate_send/controllers/attach.php
+
+activity_website/controllers/saveRegClient.php
+
+activity_website/controllers/resend_otp.php
+
+activity_website/controllers/admin/new_admin_access.php
