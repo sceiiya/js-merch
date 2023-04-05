@@ -32,12 +32,6 @@ if ($dbConnection == true) {
             $qSelect = "UPDATE $dbDatabase .`clientcart` SET `DateRemoved` = '{$dateTime}' WHERE `ClientId` = '{$index}' AND `DateRemoved` IS NULL";
             $eSelect = mysqli_query($dbConnection, $qSelect);
 
-            $qInsert = "INSERT INTO `u955154186_db_djstrading`.`products` 
-            (`ProductCode`, `ProductName`, `ProductDescription`, `ProductPrice`, `ProductQuantity`, `PaymentMethod`, `DateOrdered`) 
-            VALUES 
-            ('".$sFullname."', '{$sUsername}', '{$sEmail}', '{$sPassword}', '{$OTP}', 'inactive', '".date("Y-m-d H:i:s")."')";
-
-             $eInsert = mysqli_query($dbConnection, $qInsert);
 
             if ($eSelect == true) {
 
