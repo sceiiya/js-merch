@@ -1,7 +1,7 @@
-<input id="access_identity" style="display:block; position:fixed; right:0; top:10px;">
+<input readonly id="access_identity" style="display:block; position:fixed; right:0; top:10px;">
 
 </input>
-<input id="access_identifier" style="display:block; position:fixed; right:0; top: 40px;">
+<input readonly id="access_identifier" style="display:block; position:fixed; right:0; top: 40px;">
 
 </input>
 

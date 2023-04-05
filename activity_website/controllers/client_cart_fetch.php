@@ -29,7 +29,7 @@ if ($eSelect == true) {
         $sHtml .= '<tr>
                         <td>
                             <div class="cart-info">
-                            <div class="cart_item-img-cont"><img class="cart_item-img-main" src="/activity_website/admin/listing/product_img/'.$rows['ProductPhoto'].'"></div>
+                            <div class="cart_item-img-cont"><img class="cart_item-img-main" loading="lazy" src="/activity_website/admin/listing/product_img/'.$rows['ProductPhoto'].'"></div>
 
                                 <div>
                                     <p>'.$rows['ProductName'].'</p>

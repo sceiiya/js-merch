@@ -46,5 +46,4 @@
 <script src="/activity_website/assets/js/adminlog.js"></script>
 <script src="/activity_website/assets/js/scripts.js"></script>
 <script src="/activity_website/assets/js/admin_navs.js"></script>
-<script src="/activity_website/assets/js/admin_access_validation.js"></script>
 </html>

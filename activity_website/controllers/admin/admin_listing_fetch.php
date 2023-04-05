@@ -23,7 +23,7 @@
             $adLPCode .= "<tr>
                     <td style='display:none'>".$rows['ProductId']."</td>
                     <td>".$rows['ProductCode']."</td>
-                    <td class='adPListImgCont'><img class='adPListImg' src='../../admin/listing/product_img/".$rows['ProductPhoto']."'></td>
+                    <td class='adPListImgCont'><img class='adPListImg' loading='lazy' src='../../admin/listing/product_img/".$rows['ProductPhoto']."'></td>
                     <td>".$rows['ProductName']."</td>
                     <td class='prod_desc'>".$rows['ProductDescription']."</td>
                     <td>".$rows['ProductPrice']."</td>

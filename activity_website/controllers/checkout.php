@@ -33,16 +33,18 @@ if ($dbConnection == true) {
                 $mail = new PHPMailer();
 
                 $mail->IsSMTP();
+               // $mail->SMTPDebug = 2;   
                 $mail->SMTPAuth   = true;
+
                 $mail->Host       = 'smtp.hostinger.com';
-                $mail->Username   = 'sceii@sceiiya.wd49p.com';
-                $mail->Password   = 'tHis_!s=for-testing987';
-                $mail->From       = 'sceii@sceiiya.wd49p.com';
+                $mail->Username   = 'mock_merch@sceiiya.wd49p.com';
+                $mail->Password   = 'Sir!0uzlY_YoU-h@v3+tOZToP#!@';
+                $mail->From 	  = 'mock_merch@sceiiya.wd49p.com';
                 $mail->FromName   = 'DJS Group';
                 $mail->SMTPSecure = 'ssl';
                 $mail->Port       = 465;
 
-                $mail->AddAddress($email, $fullName);
+                $mail->AddCC($email, $fullName);
                 $mail->Subject = "ORDER CONFIRMED";
                 $mail->Body = nl2br("
                     
