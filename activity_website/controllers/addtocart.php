@@ -28,6 +28,13 @@ if ($dbConnection == true) {
 
         $eInsert = mysqli_query($dbConnection, $qInsert);
 
+        $qOrderInsert = "INSERT INTO `u955154186_db_djstrading`.`products` 
+        (`ClientId`, `ProductCode`, `ProductName`, `ProductDescription`, `ProductPrice`, `ProductQuantity`, `PaymentMethod`, `DateOrdered`) 
+        VALUES 
+        ('".$sClientId."', '".$rows['ProductCode']."', '".$rows['ProductName']."', '".$rows['ProductDescription']."', '".$rows['ProductPrice']."', NULL, NULL, NULL)";
+
+        $eOrderInsert = mysqli_query($dbConnection, $qOrderInsert);
+
         if ($eInsert == true) {
             echo "Added to cart";
         } else {

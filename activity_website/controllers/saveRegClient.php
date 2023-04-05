@@ -22,11 +22,7 @@
 
 
  
-
-
-
-                    
-                if ($rows['ClientUsername'] == $sUsername || $nTotalRows > 0) {
+                if ($nTotalRows > 0) {
 
                     echo "Username used";
                     mysqli_close($dbConnection);
@@ -40,7 +36,6 @@
                     $eInsert = mysqli_query($dbConnection, $qInsert);
                     
                         if ($eInsert == true) {
-                            echo "Registered";
                             $_SESSION['usernamereg'] = $sUsername;
                             $_SESSION['emailreg'] = $sEmail;
 			   
@@ -63,6 +58,8 @@
                             $mail->Subject = "New-User OTP code";
                             $mail->Body = nl2br("
                             Your OTP is $OTP
+
+                            Click <a href='http://jayfourth.wd49p.com/activity_website/controllers/saveRegClient.php'>here<a> to enter OTP 
                             ");			
                             $mail->IsHTML(true);
 

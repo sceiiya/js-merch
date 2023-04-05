@@ -11,13 +11,17 @@ if (!isset($_SESSION['username'])) {
     $sClientId = $_SESSION['clientid'];
     $fullName = $_SESSION['fullname'];
     $email = $_SESSION['email'];
+    $cartArray = $_SESSION['cartcontent'];
 }
+
+    // print_r($cartInfo);
 
 if ($dbConnection == true) {
     $index = $_POST['nid'];
     $address = $_POST['address'];
     $contactNum = $_POST['contact'];
     $payMethod = $_POST['payment'];
+
 
     if ($address == "" || $address == "undefined" || $address == NULL || $contactNum == "" || $contactNum == "undefined" || $contactNum == NULL || $payMethod == "" || $payMethod == "undefined" || $payMethod == NULL) {
         echo "Incomplete";
@@ -27,6 +31,7 @@ if ($dbConnection == true) {
             $dateTime = date("Y-m-d H:i:s");
             $qSelect = "UPDATE $dbDatabase .`clientcart` SET `DateRemoved` = '{$dateTime}' WHERE `ClientId` = '{$index}' AND `DateRemoved` IS NULL";
             $eSelect = mysqli_query($dbConnection, $qSelect);
+
 
             if ($eSelect == true) {
 
@@ -63,8 +68,6 @@ if ($dbConnection == true) {
                     
                     ");
 
-                    echo "order success";
-                    
                 $mail->IsHTML(true);
 
                 if (!$mail->Send()) {

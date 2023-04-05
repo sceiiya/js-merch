@@ -16,12 +16,7 @@ $("#registerClient").on('click', () => {
         url: "/activity_website/controllers/saveRegClient.php",
         data: sJsonData,
         success: (result) => {
-            if( result == true) {
-                console.log(result);
-            }else if(result == "Registered"){
-                window.location = "/activity_website/OTP.php";
-                console.log(result);
-            }else if(result == "Registeredsent"){
+            if(result == "sent"){
                 window.location = "/activity_website/OTP.php";
                 console.log(result);
             }else {
