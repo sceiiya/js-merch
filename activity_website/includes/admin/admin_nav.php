@@ -8,7 +8,7 @@
   
   <ul class="nav nav-pills flex-column mb-auto">
     <li class="nav-item">
-      <a href="/activity_website/admin/dashboard/" class="nav-link adminNav_btn active" aria-current="page">
+      <a href="/activity_website/admin/dashboard/" class="nav-link adminNav_btn">
         Dashboard
       </a>
     </li>
@@ -30,6 +30,11 @@
     <li>
       <a href="/activity_website/admin/colleague/" class="nav-link adminNav_btn" id=''>
         Colleague
+      </a>
+    </li>
+    <li id="ADDnewAdmin" style="display: block;">
+      <a href="/activity_website/admin/colleague/" class="nav-link adminNav_btn" id=''>
+        Add New Admin
       </a>
     </li>
   </ul>

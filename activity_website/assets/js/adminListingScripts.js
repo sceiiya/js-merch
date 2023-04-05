@@ -262,3 +262,30 @@ function modify(nId) {
   });
 
 }
+
+$(".btn-danger").on("click",function () {
+  var getPositionn = $("#access_identifier").val();
+      
+  if (getPositionn == "co-founder"){
+    alert("this will be deleted");
+  }else if (getPositionn == "supervisor"){
+    alert("only co-founders can archive products");
+  }else{
+    alert("forbidden access");
+  }
+  });
+
+
+  // $("#as").on("click",function () {
+  //   var getPositionn = $("#access_identifier").val();
+        
+  //   if (getPositionn == "co-founder"){
+  //     window.location = ("/activity_website/admin/give_admin_access/");
+  //   }else if (getPositionn == "supervisor"){
+  //     window.location = ("/activity_website/admin/give_admin_access/");
+  //   }else{
+  //     // var p = document.querySelector('.ADDnewAdmin');
+  //     p.style.display = "none";
+  //     alert("forbidden access");
+  //   }
+  //   });
