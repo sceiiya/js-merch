@@ -105,12 +105,4 @@ dist
 
 fetch_generate_send/controllers/attach.php
 
-activity_website/controllers/saveRegClient.php
-
-activity_website/controllers/resend_otp.php
-
-activity_website/controllers/admin/new_admin_access.php
-
-activity_website/controllers/checkout.php
-
 admin_mail_creds.php
