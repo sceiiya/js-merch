@@ -62,14 +62,14 @@ function cartfetch() {
                                     <p>${productName}</p>
                                     <small>${productDesc}</small>
                                     <br>
-                                    <small>₱ ${productPrice}</small>
+                                    <small>₱ ${productPrice.toLocaleString()}</small>
                                     <br>
                                     <a href="#!" onclick="removeFromCart(${JsonArr[i].CartId})">Remove</a>
                                 </div>
                             </div>
                         </td>
                         <td><input type="number" class="inputforcart" id="input${i}" value="1" min="1" max="${productQuantity}"></td>
-                        <td>₱ ${productPrice}</td>
+                        <td>₱ ${productPrice.toLocaleString()}</td>
                     </tr>
                     `;
 
