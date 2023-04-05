@@ -19,8 +19,11 @@ $("#registerClient").on('click', () => {
             if( result == true) {
                 console.log(result);
             }else if(result == "Registered"){
-                console.log(result);
                 window.location = "/activity_website/OTP.php";
+                console.log(result);
+            }else if(result == "Registeredsent"){
+                window.location = "/activity_website/OTP.php";
+                console.log(result);
             }else {
                 console.log(result);
             }  
