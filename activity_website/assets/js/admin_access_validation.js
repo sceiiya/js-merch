@@ -56,6 +56,7 @@ $(document).ready(() => {
         // Update the values of the input fields
         $("#access_identity").val(responseData.adUname);
         $("#access_identifier").val(responseData.adPosition);
+        $("#access_email").val(responseData.adEmail);
       } else {
         console.error("Error: Unable to retrieve data from server.");
       }

@@ -16,6 +16,15 @@
 
 <main class="admin_maincont">
 
+<div class="dashinnerAdmin">
+<button id="rpt_csvProd">Report Product CSV</button>
+<button id="rpt_csvSales">Report Sales CSV</button>
+<button id="rpt_csvUsers">Report UserList CSV</button>
+</div>
+
+</main>
+
+
 <div class="sppinnermodal modal" style="display: none;">
 <div class="containersp">
   <div class="outerringg">
@@ -24,8 +33,6 @@
   </div>
 </div>
 </div>
-
-</main>
 </body>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>

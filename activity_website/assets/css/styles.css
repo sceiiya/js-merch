@@ -448,6 +448,12 @@ body{
     width: 100% !important;
 }
 
+.dashinnerAdmin{
+    position: fixed;
+    top: 350px !important;
+    right: 350px !important;
+}
+
 .adminNav{
     width: 300px;
     height: 100%;

@@ -36,6 +36,8 @@
                             $_SESSION['username'] = $aUname;
                             $_SESSION['password'] = $aPwd;
                             $_SESSION['accesslevel'] = $rows['UserPosition'];
+                            $_SESSION['accessemail'] = $rows['UserEmail'];
+
                             echo 'Logged in succesfully!';
                             mysqli_close($dbConnection);
                         } else{
