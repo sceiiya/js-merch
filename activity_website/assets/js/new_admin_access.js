@@ -43,6 +43,7 @@ if (aFullname != '' && aUsername != '' && aEmail != '' && aPosition != ''&& aPos
                 console.log(result);
                 alert("New Admin added!");
                 $('#ConfirmNewAdminModal').modal('hide');
+                window.location = "/activity_website/admin";
             }else{
                 console.log(result);
             }
