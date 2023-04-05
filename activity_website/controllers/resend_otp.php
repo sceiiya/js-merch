@@ -29,7 +29,12 @@
 
     $mail->AddAddress($sEmail, $sUsername);
     $mail->Subject = "OTP";
-    $mail->Body = nl2br("Your OTP is " . $rows);			
+    $mail->Body = nl2br("
+    Your OTP is $rows
+
+    Click <a href='http://jayfourth.wd49p.com/activity_website/controllers/saveRegClient.php'>here<a> to enter OTP    
+    
+    ");			
     $mail->IsHTML(true);
     
 

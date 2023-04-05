@@ -188,6 +188,7 @@ $('#purchase').on('click', () => {
     var iNumber = $('#checkNumber').val();
     var payMethod = $('#paymentchoice').val();
 
+
         // console.log(nId);
         // console.log(sAddress);
         // console.log(iNumber);
@@ -206,12 +207,13 @@ $('#purchase').on('click', () => {
         success: (result) => {
             if (result == "Incomplete") {
                 alert("Please fill out all fields!");
-            } else if (result == "order success") {
+            } else if (result == "sent") {
                 alert("Order Confirmed, Thank you!")
                 $('#checkoutModal').modal('hide');
                 cartfetch()
             } else {
                 console.log(result);
+                alert(result)
                 $('#checkoutModal').modal('hide');
                 cartfetch()
             }

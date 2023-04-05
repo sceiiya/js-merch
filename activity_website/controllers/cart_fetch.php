@@ -18,7 +18,7 @@ if ($dbConnection == true) {
     while($rows = mysqli_fetch_assoc($eSelect)){
         $data[] = $rows;
     }
-
+    $_SESSION['cartcontent'] = $data;
     print_r(Json_encode($data));
     
     // print_r(Json_encode($rows));
