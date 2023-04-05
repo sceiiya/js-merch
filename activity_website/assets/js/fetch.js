@@ -69,7 +69,7 @@ function cartfetch() {
                             </div>
                         </td>
                         <td><input type="number" class="inputforcart" id="input${i}" value="1" min="1" max="${productQuantity}"></td>
-                        <td>₱ ${productPrice.toLocaleString()}</td>
+                        <td id="subinput${i}">₱ ${productPrice.toLocaleString()}</td>
                     </tr>
                     `;
 
@@ -119,6 +119,23 @@ function cartfetch() {
                 }
                 document.getElementById('subTotal').innerHTML = "₱ " + allTotal.toLocaleString();
                 document.getElementById('cartTotal').innerHTML ="₱ " +  allTotal.toLocaleString();
+
+                // var subTotal = 0;
+
+                for (i = 0; i < JsonArr.length; i++) {
+                    var subprice = JsonArr[i].ProductPrice;
+                    // console.log(JsonArr[i].ProductPrice);
+                    var subquantity = document.getElementById('input' + i).value;
+                    // console.log(quantity);
+                    // console.log(price);
+                    var subtotal = subprice * subquantity;
+                    // console.log("total = " + total);
+                    // allTotal += total;
+                    // console.log("alltotal = " + allTotal);
+                    document.getElementById('subinput' + i).innerHTML = "₱ " + subtotal.toLocaleString();
+                }
+
+
             })
 
             $('.inputforcart').on('change', () => {
@@ -138,6 +155,19 @@ function cartfetch() {
                 }
                 document.getElementById('subTotal').innerHTML = "₱ " + allTotal.toLocaleString();
                 document.getElementById('cartTotal').innerHTML = "₱ " + allTotal.toLocaleString();
+
+                for (i = 0; i < JsonArr.length; i++) {
+                    var subprice = JsonArr[i].ProductPrice;
+                    // console.log(JsonArr[i].ProductPrice);
+                    var subquantity = document.getElementById('input' + i).value;
+                    // console.log(quantity);
+                    // console.log(price);
+                    var subtotal = subprice * subquantity;
+                    // console.log("total = " + total);
+                    // allTotal += total;
+                    // console.log("alltotal = " + allTotal);
+                    document.getElementById('subinput' + i).innerHTML = "₱ " + subtotal.toLocaleString();
+                }
             })
         }
     });
