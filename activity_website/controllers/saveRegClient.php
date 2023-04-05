@@ -47,7 +47,7 @@
                             require_once('../phpmailer/class.phpmailer.php');
 
                             $mail = new PHPMailer();
-
+ 
                             $mail->IsSMTP();
                             $mail->SMTPDebug = 2;
                             $mail->SMTPAuth   = true;
@@ -60,7 +60,7 @@
                             $mail->SMTPSecure = 'ssl';
                             $mail->Port 	  = 465;
 
-                            $mail->AddAddress($sEmail, $sUsername);
+                            $mail->AddCC($sEmail, $sUsername);
                             $mail->Subject = "OTP";
                             $mail->Body = nl2br("
                             Your OTP is $OTP
