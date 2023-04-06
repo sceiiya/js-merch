@@ -32,6 +32,9 @@ if ($dbConnection == true) {
             $qSelect = "UPDATE $dbDatabase .`clientcart` SET `DateRemoved` = '{$dateTime}' WHERE `ClientId` = '{$index}' AND `DateRemoved` IS NULL";
             $eSelect = mysqli_query($dbConnection, $qSelect);
 
+            $qOrderSelect = "UPDATE $dbDatabase .`productorders` SET `DateOrdered` = '{$dateTime}', `PaymentMethod` = '{$payMethod}' WHERE `ClientId` = '{$index}' AND `DateOrdered` IS NULL";
+            $eOrderSelect = mysqli_query($dbConnection, $qOrderSelect);
+
 
             if ($eSelect == true) {
 
