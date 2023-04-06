@@ -31,7 +31,7 @@ if ($dbConnection == true) {
         $qOrderInsert = "INSERT INTO `u955154186_db_djstrading`.`productorders` 
         (`ClientId`, `ProductCode`, `ProductName`, `ProductDescription`, `ProductPrice`, `ProductQuantity`, `PaymentMethod`, `DateOrdered`) 
         VALUES 
-        ('".$sClientId."', '".$rows['ProductCode']."', '".$rows['ProductName']."', '".$rows['ProductDescription']."', '".$rows['ProductPrice']."', NULL, NULL, NULL)";
+        ('".$sClientId."', '".$rows['ProductCode']."', '".$rows['ProductName']."', '".$rows['ProductDescription']."', '".$rows['ProductPrice']."', 1, NULL, NULL)";
 
         $eOrderInsert = mysqli_query($dbConnection, $qOrderInsert);
 

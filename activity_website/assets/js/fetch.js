@@ -258,6 +258,7 @@ function valueCalc(nId) {
     // console.log("prod number " + nId + " is " + prodName);
     // console.log("prod price " + nId + " is " + prodPrice);
     // console.log("input number " + nId + " is " + inputval);
+
     var data = {
         index: nId,
         pname: prodName,
