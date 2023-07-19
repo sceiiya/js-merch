@@ -74,7 +74,7 @@ if ($dbConnection == true) {
                 $mail->IsHTML(true);
 
                 if (!$mail->Send()) {
-                    return "not sent";
+                    echo "not sent";
                 } else {
                     echo "sent";
                 }
