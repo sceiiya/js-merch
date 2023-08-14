@@ -4,6 +4,7 @@
     require_once("admin_ml_creds/admin_mail_creds.php");
 
     session_start();
+    try {
 
     if ($dbConnection == true) {
         $sFullname = $_POST['fullname'];  
@@ -16,7 +17,6 @@
             echo "Incomplete fields";
             mysqli_close($dbConnection);
         } else { 
-            try {
                 $qSelect = "SELECT `ClientUsername` FROM `u955154186_db_djstrading`.`clients`  WHERE `ClientUsername` = '$sUsername'";
                 $eSelect = mysqli_query($dbConnection, $qSelect);
                 $rows = mysqli_fetch_assoc($eSelect);
@@ -70,12 +70,11 @@
                         }
                         
                 }
-            } catch(Exception $e) {
-                echo 'Error: ' .$e->getMessage();
-            }
-
         }
 
     } else {
         echo "Connection Failed!";
     }
+} catch(Exception $e) {
+    echo 'Error: ' .$e->getMessage();
+}
