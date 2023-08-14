@@ -44,7 +44,7 @@
 
                             $mail->Host 	  = 'smtp.hostinger.com';
 
-                            $mail->FromName   = 'DJS Group';
+                            $mail->FromName   = 'JS Group';
                             $mail->SMTPSecure = 'ssl';
                             $mail->Port 	  = 465;
 

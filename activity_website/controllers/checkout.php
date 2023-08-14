@@ -46,7 +46,7 @@ if ($dbConnection == true) {
 
                 $mail->Host       = 'smtp.hostinger.com';
                 include("admin_ml_creds/admin_mail_creds.php");
-                $mail->FromName   = 'DJS Group';
+                $mail->FromName   = 'JS Group';
                 $mail->SMTPSecure = 'ssl';
                 $mail->Port       = 465;
 

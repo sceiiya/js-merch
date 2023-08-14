@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
         <div id="navBarDiv" class="container-fluid">
-            <a class="navbar-brand" href="#">DJS Merch</a>
+            <a class="navbar-brand" href="#">JS Merch</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
