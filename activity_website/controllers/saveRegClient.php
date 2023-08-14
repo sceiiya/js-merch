@@ -1,6 +1,8 @@
 <?php
-    include("../includes/db_connection.php");
-    
+    require_once("../includes/db_connection.php");
+    require_once('../phpmailer/class.phpmailer.php');
+    require_once("admin_ml_creds/admin_mail_creds.php");
+
     session_start();
 
     if ($dbConnection == true) {
@@ -20,7 +22,6 @@
                 $rows = mysqli_fetch_assoc($eSelect);
                 $nTotalRows = mysqli_num_rows($eSelect);
 
-
  
                 if ($nTotalRows > 0) {
 
@@ -28,28 +29,21 @@
                     mysqli_close($dbConnection);
                 } else {
 
-                    $qInsert = "INSERT INTO `u955154186_db_djstrading`.`clients` 
-                        (`ClientFullName`, `ClientUsername`, `ClientEmail`, `ClientPassword`, `ClientOTP`, `ClientStatus`, `date_added`) 
-                        VALUES 
-                        ('".$sFullname."', '{$sUsername}', '{$sEmail}', '{$sPassword}', '{$OTP}', 'inactive', '".date("Y-m-d H:i:s")."')";
-        
+                    $qInsert = "INSERT INTO `u955154186_db_djstrading`.`clients` (`ClientFullName`, `ClientUsername`, `ClientEmail`, `ClientPassword`, `ClientOTP`, `ClientStatus`, `date_added`) VALUES ('".$sFullname."', '{$sUsername}', '{$sEmail}', '{$sPassword}', '{$OTP}', 'inactive', '".date("Y-m-d H:i:s")."')";
                     $eInsert = mysqli_query($dbConnection, $qInsert);
                     
                         if ($eInsert == true) {
                             $_SESSION['usernamereg'] = $sUsername;
                             $_SESSION['emailreg'] = $sEmail;
 			   
-
-                            require_once('../phpmailer/class.phpmailer.php');
-
                             $mail = new PHPMailer();
  
                             $mail->IsSMTP();
-                           // $mail->SMTPDebug = 2;
+                            $mail->SMTPDebug = 2;
                             $mail->SMTPAuth   = true;
 
                             $mail->Host 	  = 'smtp.hostinger.com';
-                            include("admin_ml_creds/admin_mail_creds.php");
+
                             $mail->FromName   = 'DJS Group';
                             $mail->SMTPSecure = 'ssl';
                             $mail->Port 	  = 465;
