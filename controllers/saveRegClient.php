@@ -42,7 +42,7 @@
                             $mail = new PHPMailer();
  
                             $mail->IsSMTP();
-                            $mail->SMTPDebug = 2;
+                            // $mail->SMTPDebug = 2;
                             $mail->SMTPAuth   = true;
 
                             $mail->Host 	  = 'smtp.hostinger.com';
