@@ -1,7 +1,6 @@
 <?php
     require_once("../includes/db_connection.php");
     require_once('../phpmailer/class.phpmailer.php');
-    require_once("admin_ml_creds/admin_mail_creds.php");
 
     session_start();
     try {
@@ -44,6 +43,7 @@
 
                             $mail->Host 	  = 'smtp.hostinger.com';
 
+                            require_once("admin_ml_creds/admin_mail_creds.php");
                             $mail->FromName   = 'JS Group';
                             $mail->SMTPSecure = 'ssl';
                             $mail->Port 	  = 465;
