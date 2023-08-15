@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
-    <link rel="stylesheet" href="/activity_website/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
     <title>Register | JS Merch</title>
 
 </head>
@@ -47,7 +47,7 @@
             <button type="button" id="registerClient" class="btn btn-primary btn-block mb-4">Register</button>
 
             <div class="text-center">
-                <p>Already registered? <a href="/activity_website/login.php">Login here</a></p>
+                <p>Already registered? <a href="/login.php">Login here</a></p>
             </div>
         </div>
 
@@ -57,5 +57,5 @@
 
 </html>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
-<script src="/activity_website/assets/js/jquery-3.6.3.min.js"></script>
-<script src="/activity_website/assets/js/client_register.js"></script>
+<script src="/assets/js/jquery-3.6.3.min.js"></script>
+<script src="/assets/js/client_register.js"></script>

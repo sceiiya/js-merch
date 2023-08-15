@@ -2,7 +2,7 @@
 // // new posHtml = $("#access_identifier").val();
 
 
-//     $.post("/activity_website/includes/admin/admin_position.php",
+//     $.post("/includes/admin/admin_position.php",
 //     {
 //       name: "Donald Duck",
 //       city: "Duckburg"
@@ -11,7 +11,7 @@
 //       alert("Data: " + data + "\nStatus: " + status);
 //     });
 
-//     $.get("/activity_website/includes/admin/admin_position.php", (data, status)=>{
+//     $.get("/includes/admin/admin_position.php", (data, status)=>{
 //         alert("Data: " + data + "\nStatus: " + status);
 //         $("#access_identifier").val(data);
 //     });
@@ -19,12 +19,12 @@
 
 // $.ajax({
 //     type: 'POST',
-//     url: "/activity_website/includes/admin/admin_position.php",
+//     url: "/includes/admin/admin_position.php",
 //     success: (result) => {
 //         $("#access_identifier").val(result);
 //         // if( result == "Logged in succesfully!") {
 //         //     console.log(result);          
-//         //     window.location = "/activity_website/admin/dashboard/index.php";
+//         //     window.location = "/admin/dashboard/index.php";
 //         // }else if (result == "Incomplete credentials!"){
 //         //     console.log(result);          
 //         //     alert("Please fill up your Admin Credentials to gain access!");
@@ -42,13 +42,13 @@
 
 $("#my_adminLogout").on("click", ()=>{
     console.log("clicked");
-    window.location = ("/activity_website/controllers/admin/adminLog_out.php");
-    // window.Location = "/activity_website/controllers/admin/adminLog_out.php";
+    window.location = ("/controllers/admin/adminLog_out.php");
+    // window.Location = "/controllers/admin/adminLog_out.php";
 })
 
 
 $(document).ready(() => {
-    $.get("/activity_website/controllers/admin/admin_position.php", (data, status) => {
+    $.get("/controllers/admin/admin_position.php", (data, status) => {
       if (status === "success") {
         // Parse the response data as JSON
         const responseData = JSON.parse(data);

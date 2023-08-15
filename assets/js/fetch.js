@@ -13,7 +13,7 @@ function fetch() {
 
     $.ajax({
         type: 'POST',
-        url: "/activity_website/controllers/fetch.php",
+        url: "/controllers/fetch.php",
         success: (result) => {
             if (result == "error") {
                 alert("Please call system admnistrator");
@@ -29,7 +29,7 @@ function cartfetch() {
 
     $.ajax({
         type: 'POST',
-        url: "/activity_website/controllers/cart_fetch.php",
+        url: "/controllers/cart_fetch.php",
         success: (result) => {
             var dataArr = result;
             // console.log(JSON.parse(dataArr));
@@ -57,7 +57,7 @@ function cartfetch() {
                 sHtml += `<tr>
                         <td>
                             <div class="cart-info">
-                            <div class="checkout_cart-cont"><img class="cart_item-img-main" src="/activity_website/admin/listing/product_img/${productPhoto}"></div>
+                            <div class="checkout_cart-cont"><img class="cart_item-img-main" src="/admin/listing/product_img/${productPhoto}"></div>
 
                                 <div>
                                     <p id="pNameInfo${i}">${productName}</p>
@@ -212,7 +212,7 @@ function valueCalc(nId) {
 
     $.ajax({
         type: 'POST',
-        url: "/activity_website/controllers/cart_fetch.php",
+        url: "/controllers/cart_fetch.php",
         success: (result) => {
             var dataArr = result;
             // console.log(JSON.parse(dataArr));
@@ -268,7 +268,7 @@ function valueCalc(nId) {
 
     $.ajax ({
         type: 'POST',
-        url: '/activity_website/controllers/quantityupdate.php',
+        url: '/controllers/quantityupdate.php',
         data: data,
         success: (result) => {
             if(result == "updated") {
@@ -288,7 +288,7 @@ function removeFromCart(nId) {
     }
     $.ajax({
         type: 'POST',
-        url: '/activity_website/controllers/remove_cart.php',
+        url: '/controllers/remove_cart.php',
         data: nIndex,
         success: (result) => {
             if (result == "Removed") {
@@ -341,7 +341,7 @@ $('#purchase').on('click', () => {
 
     $.ajax({
         type: 'POST',
-        url: "/activity_website/controllers/checkout.php",
+        url: "/controllers/checkout.php",
         data: dataObj,
         success: (result) => {
             if (result == "Incomplete") {

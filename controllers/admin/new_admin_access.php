@@ -39,7 +39,7 @@
                         ('{$aName}', '{$aUname}', '{$aEmail}', '{$aPosition}', '{$aPwd}', '".date("Y-m-d H:i:s")."')";
         
                     $eInsert = mysqli_query($dbConnection, $qInsert);
-                    
+                        $pathlink = gethostname();
                         if ($eInsert == true) {
                             echo "New Admin added!";
 
@@ -70,7 +70,7 @@
                             Email: {$aEmail}
                             Password: {$aPwd}
                         
-                            login here: /activity_website/admin/
+                            login here: https://{$pathlink}/admin/
 
                             ");
                             

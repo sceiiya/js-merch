@@ -10,7 +10,7 @@ include("../includes/db_connection.php");
 session_start();
 
 if (!isset($_SESSION['username'])) {
-    header('Location: /activity_website/login.php');
+    header('Location: /login.php');
 } else {
     $sUsername = $_SESSION['username'];
     $sClientId = $_SESSION['clientid'];

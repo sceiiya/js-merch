@@ -34,7 +34,7 @@
 
                     $qInsert = "INSERT INTO `u955154186_db_djstrading`.`clients` (`ClientFullName`, `ClientUsername`, `ClientEmail`, `ClientPassword`, `ClientOTP`, `ClientStatus`, `date_added`) VALUES ('".$sFullname."', '{$sUsername}', '{$sEmail}', '{$sPassword}', '{$OTP}', 'inactive', '".date("Y-m-d H:i:s")."')";
                     $eInsert = mysqli_query($dbConnection, $qInsert);
-                    
+                        $hostname = gethostname();
                         if ($eInsert == true) {
                             $_SESSION['usernamereg'] = $sUsername;
                             $_SESSION['emailreg'] = $sEmail;
@@ -57,7 +57,7 @@
                             $mail->Body = nl2br("
                             Your OTP is $OTP
 
-                            Click <a href='http://jayfourth.wd49p.com/activity_website/controllers/saveRegClient.php'>here<a> to enter OTP 
+                            Click <a href='https://{$hostname}/controllers/saveRegClient.php'>here<a> to enter OTP 
                             ");			
                             $mail->IsHTML(true);
 

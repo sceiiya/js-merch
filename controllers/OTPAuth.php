@@ -3,7 +3,7 @@
     session_start();
 
     if(!isset($_SESSION['usernamereg'])){
-        header('Location: /activity_website/register.php');
+        header('Location: /register.php');
     }else{
         $sUsername = $_SESSION['usernamereg'];
         $sEmail = $_SESSION['emailreg'];

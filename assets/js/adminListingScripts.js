@@ -27,7 +27,7 @@ var sJsonProduct = {
 
   $.ajax({
       type: 'POST',
-      url: "/activity_website/controllers/admin/admin_list_product.php",
+      url: "/controllers/admin/admin_list_product.php",
       data: sJsonProduct,
       success: (result) => {
           if( result == "Product Listed!") {
@@ -36,7 +36,7 @@ var sJsonProduct = {
         
             console.log(result);
 
-              // window.location = "/activity_website/controllers/OTP.php";
+              // window.location = "/controllers/OTP.php";
           } else if ( result == "Incomplete") {
               alert("Please fill out all fields");
           } else if ( result == "Failed Listing!") {
@@ -55,7 +55,7 @@ var sJsonProduct = {
   form_data.append('image', iImage);
 
   $.ajax({
-    url: '  /activity_website/controllers/admin/admin_list_product_img.php',
+    url: '  /controllers/admin/admin_list_product_img.php',
     type: 'post',
     data: form_data,
     contentType: false,
@@ -85,7 +85,7 @@ function fetch() {
 
 $.ajax({
     type: 'POST',
-    url: "/activity_website/controllers/admin/admin_listing_fetch.php",
+    url: "/controllers/admin/admin_listing_fetch.php",
     beforeSend: function (){
       var x = document.querySelector('.sppinnermodal');
       if (x.style.display === "none") {
@@ -118,7 +118,7 @@ function archive(nId) {
   // console.log(nIndex);
   $.ajax({
       type: 'POST',
-      url: "/activity_website/controllers/admin/archive_product.php",
+      url: "/controllers/admin/archive_product.php",
       data: nIndex,
       success: (result) => {
           if (result == "error") {
@@ -136,7 +136,7 @@ function modify(nId) {
 
       $.ajax({
       type: 'POST',
-      url: "/activity_website/controllers/admin/modify_product.php",
+      url: "/controllers/admin/modify_product.php",
       data: {nid: nId},
       success: (result) => {
           if (result == "error") {
@@ -174,7 +174,7 @@ function modify(nId) {
                   
                   $.ajax({
                       type: 'POST',
-                      url: "/activity_website/controllers/admin/modify_save.php",
+                      url: "/controllers/admin/modify_save.php",
                       data: sJsonData,
                       success: (result) => {
                           if (result == "updated") {
@@ -194,7 +194,7 @@ function modify(nId) {
                   form_data.append('image', iImage);
 
                   $.ajax({
-                    url: '  /activity_website/controllers/admin/admin_update_product_img.php',
+                    url: '  /controllers/admin/admin_update_product_img.php',
                     type: 'post',
                     data: form_data,
                     contentType: false,
@@ -239,9 +239,9 @@ $(".archhh").on("click",function () {
   //   var getPositionn = $("#access_identifier").val();
         
   //   if (getPositionn == "co-founder"){
-  //     window.location = ("/activity_website/admin/give_admin_access/");
+  //     window.location = ("/admin/give_admin_access/");
   //   }else if (getPositionn == "supervisor"){
-  //     window.location = ("/activity_website/admin/give_admin_access/");
+  //     window.location = ("/admin/give_admin_access/");
   //   }else{
   //     // var p = document.querySelector('.ADDnewAdmin');
   //     p.style.display = "none";

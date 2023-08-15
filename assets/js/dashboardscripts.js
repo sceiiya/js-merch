@@ -9,7 +9,7 @@ $('#rpt_csvProd').on('click', () => {
   
     $.ajax({
         type: 'POST',
-        url: "/activity_website/controllers/admin/admin_csv_products.php",
+        url: "/controllers/admin/admin_csv_products.php",
         data: sJsondata,
         success: (result) => {
             if( result == "sent") {
@@ -33,7 +33,7 @@ $('#rpt_csvSales').on('click', () => {
   
     $.ajax({
         type: 'POST',
-        url: "/activity_website/controllers/admin/admin_csv_sales.php",
+        url: "/controllers/admin/admin_csv_sales.php",
         data: sJsondata,
         success: (result) => {
             if( result == "sent") {
@@ -57,7 +57,7 @@ $('#rpt_csvUsers').on('click', () => {
   
     $.ajax({
         type: 'POST',
-        url: "/activity_website/controllers/admin/admin_csv_users.php",
+        url: "/controllers/admin/admin_csv_users.php",
         data: sJsondata,
         success: (result) => {
             if( result == "sent") {

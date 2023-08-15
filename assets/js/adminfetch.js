@@ -4,7 +4,7 @@ $( document ).on('load', fetch()
 
 //   $.ajax({
 //     type: 'POST',
-//     url: "/activity_website/controllers/admin_listing_fetch.php",
+//     url: "/controllers/admin_listing_fetch.php",
 //     success: (result) => {
 //         if( result == "Record successfully saved!") {
 
@@ -31,7 +31,7 @@ function fetch() {
 
 $.ajax({
     type: 'POST',
-    url: "/activity_website/controllers/admin/admin_listing_fetch.php",
+    url: "/controllers/admin/admin_listing_fetch.php",
     beforeSend: function (){
       var x = document.querySelector('.sppinnermodal');
       if (x.style.display === "none") {

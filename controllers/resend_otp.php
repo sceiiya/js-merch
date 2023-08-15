@@ -7,9 +7,9 @@
     include('../includes/db_connection.php');
 
     session_start();
-
+    $hostname = gethostname();
     if(!isset($_SESSION['usernamereg'])){
-        header('Location: /activity_website/register.php');
+        header('Location: /register.php');
     }else{
         $sUsername = $_SESSION['usernamereg'];
         $sEmail = $_SESSION['emailreg'];
@@ -36,7 +36,7 @@
     $mail->Body = nl2br("
     Your OTP is $rows
 
-    Click <a href='http://jayfourth.wd49p.com/activity_website/controllers/saveRegClient.php'>here<a> to enter OTP    
+    Click <a href='https://{$hostname}/controllers/saveRegClient.php'>here<a> to enter OTP    
     
     ");			
     $mail->IsHTML(true);

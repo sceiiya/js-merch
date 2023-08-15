@@ -13,11 +13,11 @@ $("#registerClient").on('click', () => {
 
     $.ajax({
         type: 'POST',
-        url: "/activity_website/controllers/saveRegClient.php",
+        url: "/controllers/saveRegClient.php",
         data: sJsonData,
         success: (result) => {
             if(result == "sent"){
-                window.location = "/activity_website/OTP.php";
+                window.location = "/OTP.php";
                 console.log(result);
             }else {
                 console.log(result);

@@ -7,7 +7,7 @@
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="/activity_website/index.php">Products</a>
+                        <a class="nav-link" href="/index.php">Products</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="cart.php">Cart</a>
@@ -16,7 +16,7 @@
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Profile</a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" id="changePass" href="#!">Change Password</a></li>
-                            <li><a class="dropdown-item" href="/activity_website/logout.php" id="logoutClient">Logout</a></li>
+                            <li><a class="dropdown-item" href="/logout.php" id="logoutClient">Logout</a></li>
                         </ul>
                     </li>
                 </ul>

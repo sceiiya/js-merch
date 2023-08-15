@@ -1,5 +1,5 @@
 $("#my_adminLogout").on('click', ()=>{
-    window.location = "/activity_website/controllers/admin/adminLog_out.php";
+    window.location = "/controllers/admin/adminLog_out.php";
 })
 
 $('#addNewAdmin').on('click', () => {
@@ -29,7 +29,7 @@ if (aFullname != '' && aUsername != '' && aEmail != '' && aPosition != ''&& aPos
     
     $.ajax({
         type: 'POST',
-        url: "/activity_website/controllers/admin/new_admin_access.php",
+        url: "/controllers/admin/new_admin_access.php",
         data: sNewAdminCreds,
         success: (result) => {
             if( result == true) {
@@ -43,7 +43,7 @@ if (aFullname != '' && aUsername != '' && aEmail != '' && aPosition != ''&& aPos
                 console.log(result);
                 alert("New Admin added!");
                 $('#ConfirmNewAdminModal').modal('hide');
-                window.location = "/activity_website/admin";
+                window.location = "/admin";
             }else{
                 console.log(result);
             }

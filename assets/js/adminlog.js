@@ -12,12 +12,12 @@
 
     $.ajax({
         type: 'POST',
-        url: "/activity_website/controllers/admin/adminlog.php",
+        url: "/controllers/admin/adminlog.php",
         data: sAdminCred,
         success: (result) => {
             if( result == "Logged in succesfully!") {
                 console.log(result);          
-                window.location = "/activity_website/admin/dashboard/index.php";
+                window.location = "/admin/dashboard/index.php";
             }else if (result == "Incomplete credentials!"){
                 console.log(result);          
                 alert("Please fill up your Admin Credentials to gain access!");

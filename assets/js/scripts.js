@@ -10,11 +10,11 @@ $("#loginClient").on('click', () => {
 
     $.ajax({
         type: 'POST',
-        url: "/activity_website/controllers/loginAuth.php",
+        url: "/controllers/loginAuth.php",
         data: sJsonData,
         success: (result) => {
                 if( result == "Login Success") {
-                    window.location = "/activity_website/index.php";
+                    window.location = "/index.php";
                 } else if (result == "OTP Not Verified"){
                     alert("OTP not verified, please check you email.");
                 } else {
@@ -34,13 +34,13 @@ $("#verifyOTP").on('click', () => {
 
     $.ajax({
         type: 'POST',
-        url: "/activity_website/controllers/OTPAuth.php",
+        url: "/controllers/OTPAuth.php",
         data: sJsonData,
         success: (result) => {
                 if( result == "OTP Verified") {
                     console.log("OTP Verified!");
                     alert("OTP Verified, please log in.")
-                    window.location = "/activity_website/login.php";
+                    window.location = "/login.php";
                 } else {
                     alert("OTP not verified, please check you email.")
                     console.log(result);
@@ -53,7 +53,7 @@ $("#verifyOTP").on('click', () => {
 $('#resendOTP').on('click', () => {
     $.ajax({
         type:'POST',
-        url: "/activity_website/controllers/resend_otp.php",
+        url: "/controllers/resend_otp.php",
         success: (result) => {
             if( result == "sent") {
                 alert("OTP sent, please check you email.");
@@ -67,7 +67,7 @@ $('#resendOTP').on('click', () => {
 $('#changePass').on('click', () => {
     $.ajax({
         type: 'POST',
-        url: "/activity_website/controllers/fetchpass.php",
+        url: "/controllers/fetchpass.php",
         success: (result) => {
             var objRes = JSON.parse(result);
             sPassword = $("#oldPass").val(objRes.ClientPassword);
@@ -83,7 +83,7 @@ $('#changePass').on('click', () => {
 
                 $.ajax({
                     type:'POST',
-                    url: "/activity_website/controllers/changepassword.php",
+                    url: "/controllers/changepassword.php",
                     data: sJsonData,
                     success: (result) => {
                         if( result == "Password saved!") {
@@ -114,7 +114,7 @@ function addToCart(nId) {
 
     $.ajax({
         type: 'POST',
-        url: "/activity_website/controllers/addtocart.php",
+        url: "/controllers/addtocart.php",
         data: nIndex,
         success: (result) => {
             if( result == "Added to cart") {

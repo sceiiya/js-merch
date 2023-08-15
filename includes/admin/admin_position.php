@@ -12,7 +12,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['username'])) {
-    header('Location: /activity_website/admin/');
+    header('Location: /admin/');
   } else {
     $aUname = $_SESSION['username'];
     $aPwd = $_SESSION['password'];

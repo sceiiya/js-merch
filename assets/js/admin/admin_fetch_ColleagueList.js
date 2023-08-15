@@ -4,7 +4,7 @@ function fetch_adColleague_all() {
 
     $.ajax({
         type: 'POST',
-        url: "/activity_website/controllers/admin/admin_fetch_ColleagueList.php",
+        url: "/controllers/admin/admin_fetch_ColleagueList.php",
         beforeSend: function (){
           var x = document.querySelector('.sppinnermodal');
           if (x.style.display === "none") {
