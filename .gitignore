@@ -105,4 +105,6 @@ dist
 
 fetch_generate_send/controllers/attach.php
 
+vendor/
+
 admin_mail_creds.php
