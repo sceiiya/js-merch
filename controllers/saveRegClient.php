@@ -57,7 +57,7 @@
                             $mail->Body = nl2br("
                             Your OTP is $OTP
 
-                            Click <a href='https://{$hostname}/controllers/saveRegClient.php'>here<a> to enter OTP 
+                            Click <a href='https://{$hostname}/saveRegClient.php'>here<a> to enter OTP 
                             ");			
                             $mail->IsHTML(true);
 
