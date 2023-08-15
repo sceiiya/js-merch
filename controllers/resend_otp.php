@@ -7,7 +7,7 @@
     include('../includes/db_connection.php');
 
     session_start();
-    $hostname = gethostname();
+    $hostname = getenv('HTTP_HOST');
     if(!isset($_SESSION['usernamereg'])){
         header('Location: /register.php');
     }else{

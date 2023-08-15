@@ -39,7 +39,7 @@
                         ('{$aName}', '{$aUname}', '{$aEmail}', '{$aPosition}', '{$aPwd}', '".date("Y-m-d H:i:s")."')";
         
                     $eInsert = mysqli_query($dbConnection, $qInsert);
-                        $pathlink = gethostname();
+                        $pathlink = getenv('HTTP_HOST');
                         if ($eInsert == true) {
                             echo "New Admin added!";
 

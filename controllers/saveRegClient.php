@@ -34,7 +34,7 @@
 
                     $qInsert = "INSERT INTO `u955154186_db_djstrading`.`clients` (`ClientFullName`, `ClientUsername`, `ClientEmail`, `ClientPassword`, `ClientOTP`, `ClientStatus`, `date_added`) VALUES ('".$sFullname."', '{$sUsername}', '{$sEmail}', '{$sPassword}', '{$OTP}', 'inactive', '".date("Y-m-d H:i:s")."')";
                     $eInsert = mysqli_query($dbConnection, $qInsert);
-                        $hostname = gethostname();
+                        $hostname = getenv('HTTP_HOST');
                         if ($eInsert == true) {
                             $_SESSION['usernamereg'] = $sUsername;
                             $_SESSION['emailreg'] = $sEmail;
