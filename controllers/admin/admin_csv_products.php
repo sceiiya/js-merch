@@ -1,5 +1,11 @@
 <?php
 
+    use PHPMailer\PHPMailer\PHPMailer;
+    use PHPMailer\PHPMailer\SMTP;
+    use PHPMailer\PHPMailer\Exception;
+
+    require '../../vendor/autoload.php';
+
     $adUname = $_POST['username'];
     $adEmail = $_POST['email'];
 
@@ -31,8 +37,6 @@
             echo "error";
         }
     
-    include('../../phpmailer/class.phpmailer.php');
-
     $mail = new PHPMailer();
  
     $mail->IsSMTP();

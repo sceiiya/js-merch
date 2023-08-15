@@ -1,5 +1,9 @@
 <?php
-    include('../phpmailer/class.phpmailer.php');
+    use PHPMailer\PHPMailer\PHPMailer;
+    use PHPMailer\PHPMailer\SMTP;
+    use PHPMailer\PHPMailer\Exception;
+
+    require '../../vendor/autoload.php';
     include("../includes/db_connection.php");
     
     session_start();

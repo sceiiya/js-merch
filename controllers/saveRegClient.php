@@ -1,6 +1,10 @@
 <?php
     require_once("../includes/db_connection.php");
-    require_once('../phpmailer/class.phpmailer.php');
+    use PHPMailer\PHPMailer\PHPMailer;
+    use PHPMailer\PHPMailer\SMTP;
+    use PHPMailer\PHPMailer\Exception;
+
+    require '../vendor/autoload.php';
 
     session_start();
     try {

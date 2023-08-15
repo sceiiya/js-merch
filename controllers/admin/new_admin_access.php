@@ -1,4 +1,9 @@
 <?php
+    use PHPMailer\PHPMailer\PHPMailer;
+    use PHPMailer\PHPMailer\SMTP;
+    use PHPMailer\PHPMailer\Exception;
+
+    require '../../vendor/autoload.php';
 
     include("../../includes/db_connection.php");
     
@@ -37,8 +42,6 @@
                     
                         if ($eInsert == true) {
                             echo "New Admin added!";
-
-                            require_once('../../phpmailer/class.phpmailer.php');
 
                             $mail = new PHPMailer();
                          
